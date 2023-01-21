@@ -1,0 +1,125 @@
+// * Abstracts
+@import "abstracts/variables";
+// @import "abstracts/typography";
+
+// * Testing
+html {
+    body {
+        // -* Adding borders to all components for easier box-styling
+        &, * {
+            border: dashed 1px red;
+        }
+
+        // -* By default
+        section {
+            height: 100vh;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+// * Overall Styling
+html {
+    body {
+        // -* Removing default margin+padding and establishing border-box box-sizing for easier box-styling
+        &,
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        // -* Making sure page fills the entire viewport
+        width: 100vw;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+}
+
+// * Importing site-wide partials
+html {
+    body {
+        @import "partials/Header";
+        // @import "partials/Footer";
+    }
+}
+
+// * Managing the full-body filter when modals/pop-ups/slider show
+html {
+    body {
+        &.disable-scroll {
+            overflow-y: hidden;
+        }
+
+        .filter {
+            width: 100vw;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: black;
+            transition: 0.35s opacity;
+
+            &-hidden {
+                z-index: -1;
+                opacity: 0;
+            }
+
+            &-fade_in {
+                z-index: 50;
+                opacity: 0;
+            }
+
+            &-fade_out {
+                z-index: 50;
+                opacity: 0;
+            }
+
+            &-show {
+                z-index: 50;
+                opacity: 0.7;
+            }
+
+        }
+    }
+}
+
+// * Import pages
+html {
+    body {
+        @import "pages/Home/Home";
+        // @import "pages/Terms & Conditions/TnC";
+    }
+}
+
+// * Make page flex-box
+html {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        main {
+            flex-grow: 1;
+
+            // // * All Sizes
+            // @media (min-width: 0px) {
+            //     padding: 100px 0px 0px;
+            //     display: flex;
+            //     flex-direction: column;
+            //     flex-grow: 1;
+
+            // }
+
+            // // * Smaller Desktop    
+            // @media (min-width: 1200px) {
+            //     width: 1200px;
+            // }
+        }
+    }
+}

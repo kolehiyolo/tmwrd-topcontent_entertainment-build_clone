@@ -1,0 +1,31 @@
+.main-home {
+    @import "sections/Hero";
+    // @import "sections/Steps";
+    // @import "sections/HowItWorks";
+    // @import "sections/SearchWith";
+    // @import "sections/Supported";
+    // @import "sections/FAQ";
+
+
+    section {
+        // border: solid 1px blue;
+    }
+
+    // * All Sizes
+    @media (min-width: 0px) {
+        padding: 0 50px;
+        // display: flex;   
+        // flex-direction: column;
+
+    }
+
+        // * Mobile-Tablet
+        @media (max-width: 768px) {
+            padding: 0 20px;
+        }
+
+    // * Smaller Desktop    
+    @media (min-width: 1200px) {
+        // width: 1200px;
+    }
+}

@@ -1,0 +1,79 @@
+.section-hero {
+    &,
+    * {
+        // border: dashed 1px red;
+    }
+
+    // * All Sizes
+    @media (min-width: 0px) {
+
+    }
+
+    // * Mobile-Tablet
+    @media (max-width: 768px) {}
+
+    // * Collapsed Footer
+    @media (max-width: 992px) {
+
+    }
+
+    // * Smaller Desktop    
+    @media (min-width: 1200px) {
+        
+    }
+
+    // * Empty
+    @media (min-width: 10000px) {
+        .intro {
+            .txt-title {
+                &-1 {
+
+                }
+
+                &-2 {
+
+                }
+            }
+            .txt-subtitle {
+
+            }
+
+            .btn-continue {
+
+            }
+
+            .txt-compatibility {
+                &-1 {
+
+                }
+
+                &-2 {
+
+                }
+
+                .green_dot {
+
+                }
+            }
+        }
+        .content_type {
+            .list {
+                .item {
+                    &-movies {}
+                    &-music {}
+                    &-games {}
+                    &-audiobooks {}
+
+                    i {
+
+                    }
+                    
+                    p {
+
+                    }
+                }
+            }
+        }
+        .steps {}
+    }
+}

@@ -1,0 +1,52 @@
+//responsive breakpoints
+$small: 320px;
+$xs-medium: 375px;
+$s-medium: 480px;
+$medium: 767px;
+$s-large: 991px;
+$large: 1024px;
+$m-large: 1200px;
+$x-large: 1600px;
+$xx-large: 2800px;
+
+:root {
+    --color-primary: #01C77C;
+    --color-primary-lighter: #2de9a1;
+
+    --color-text: #2f2c2c;
+    
+    --color-container-1: #f5f5f5;
+
+    --color-white-1: #ffffff;
+    --color-white-hover: #cccccc;
+    // --color-white-2: #f5f5f5;
+    --color-black-1: #333232;
+
+
+    --color-white: #ffffff;
+    --color-white-2: #f8f9f9;
+    --color-text: #494F7A;
+    --color-blue-1: #104EDC;
+    --color-blue-2: #7590cf;
+    --color-sea_green-1: #21d29c;
+    --color-translucent-blue: #0baeff23;
+    --gradient-blue: linear-gradient(70deg, #3378fe, #1e5ae5);
+
+    // --color4: #b8b8b8;
+    // --color5: #5b8dc5; // used in button and link
+    // --color6: #86A7DE; // button hover
+    // --color7: #005580; // link hover
+    // --color8: #ececec; // used in border solor;
+    // --color9: #b94a48; // used on error
+    // --color10: #F2DEDE; // used on error bg;
+    // --color11: #eed3d7; // used on error border color;
+
+    --font-1: 'Montserrat', sans-serif;
+    // --font-2: 'Noto Sans', sans-serif;
+    
+
+    // --primary-color: var(--color1);
+    // --text-color: var(--color2);
+    // --text-color-dark: var(--color3);
+    // --text-color-light: var(--color4);
+}

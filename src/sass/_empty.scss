@@ -1,0 +1,50 @@
+.footer {
+    &,
+    * {
+        // border: dashed 1px red;
+    }
+
+    // * All Sizes
+    @media (min-width: 0px) {
+
+    }
+
+    // * Mobile-Tablet
+    @media (max-width: 768px) {}
+
+    // * Collapsed Footer
+    @media (max-width: 992px) {
+
+    }
+
+    // * Smaller Desktop    
+    @media (min-width: 1200px) {
+        
+    }
+
+    // * Empty
+    @media (min-width: 10000px) {
+        &-container {
+            &-logo {
+                img {
+
+                }
+            }
+
+            &-copyright {
+                small {
+
+                }
+            }
+            &-links {
+                &-list {
+                    li {
+                        a {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
