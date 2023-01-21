@@ -7,18 +7,18 @@ html {
     body {
         // -* Adding borders to all components for easier box-styling
         &, * {
-            border: dashed 1px red;
+            // border: dashed 1px red;
         }
 
         // -* By default
         section {
-            height: 100vh;
-            background-color: black;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            // height: 100vh;
+            // background-color: black;
+            // color: white;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
         }
     }
 }
@@ -38,6 +38,15 @@ html {
         width: 100vw;
         min-height: 100vh;
         overflow-x: hidden;
+    }
+}
+
+// * Universal Classes {
+html {
+    body {
+        .txt-bold {
+            font-weight: bold;
+        }
     }
 }
 

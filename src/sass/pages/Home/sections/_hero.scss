@@ -6,74 +6,237 @@
 
     // * All Sizes
     @media (min-width: 0px) {
+        min-height: 100vh;
+        padding-top: 50px;
 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+
+        background-image: url("../img/pages/home/bg-hero.png");
+        background-repeat: no-repeat;
+        // background-attachment: fixed;
+        background-position: center;
+        background-size: 100vw;
+
+        .intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            .txt-title {
+                font-family: var(--font-1);
+
+                &-1 {
+                    
+                }
+
+                &-2 {
+                    display: none;
+                }
+            }
+
+            .txt-subtitle {
+                font-size: 22px;
+            }
+
+            .btn-continue {
+                background-color: var(--color-primary);
+                text-transform: uppercase;
+                font-size: 35px;
+                font-family: var(--font-1);
+                font-weight: bold;
+                color: var(--color-white-1);
+                border: none;
+                padding: 20px 90px;
+            }
+
+            .txt-compatibility {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 7px;
+                font-size: 18px;
+
+                &-1 {}
+
+                &-2 {
+                    display: none;
+                }
+
+                .green_dot {
+                    width: 12px;
+                    height: 12px;
+                    background-color: var(--color-primary);
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .content_type {
+            .list {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+                .item {
+                    list-style-type: none;
+                    width: 100px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: stretch;
+                    text-align: center;
+                    gap: 10px;
+
+                    &-movies {}
+
+                    &-music {}
+
+                    &-games {}
+
+                    &-audiobooks {}
+
+                    i {
+                        font-size: 50px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    p {}
+                }
+            }
+        }
+
+        .steps {
+            .txt-instructions {
+                display: none;
+            }
+
+            .list {
+                display: flex;
+                flex-direction: row;
+                gap: 100px;
+
+                .item {
+                    list-style-type: none;
+                    width: 200px;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+
+                    &-1 {}
+
+                    &-2 {}
+
+                    &-3 {}
+
+                    .step_number {
+                        width: 50px;
+                        height: 50px;
+                        background-color: var(--color-primary);
+                        border-radius: 50%;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        span {
+                            font-size: 28px;
+                            color: var(--color-white-1);
+                        }
+                    }
+
+                    .step_text {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
     }
 
     // * Mobile-Tablet
     @media (max-width: 768px) {}
 
     // * Collapsed Footer
-    @media (max-width: 992px) {
-
-    }
+    @media (max-width: 992px) {}
 
     // * Smaller Desktop    
-    @media (min-width: 1200px) {
-        
-    }
+    @media (min-width: 1200px) {}
 
     // * Empty
-    @media (min-width: 10000px) {
+    @media (min-width: 10000000px) {
+
+        // @media (min-width: 0px) {
         .intro {
             .txt-title {
-                &-1 {
+                &-1 {}
 
-                }
-
-                &-2 {
-
-                }
-            }
-            .txt-subtitle {
-
+                &-2 {}
             }
 
-            .btn-continue {
+            .txt-subtitle {}
 
-            }
+            .btn-continue {}
 
             .txt-compatibility {
-                &-1 {
+                &-1 {}
 
-                }
+                &-2 {}
 
-                &-2 {
-
-                }
-
-                .green_dot {
-
-                }
+                .green_dot {}
             }
         }
+
         .content_type {
             .list {
                 .item {
                     &-movies {}
+
                     &-music {}
+
                     &-games {}
+
                     &-audiobooks {}
 
-                    i {
+                    i {}
 
-                    }
-                    
-                    p {
-
-                    }
+                    p {}
                 }
             }
         }
-        .steps {}
+
+        .steps {
+            .txt-instructions {}
+
+            .list {
+                .item {
+                    &-1 {}
+
+                    &-2 {}
+
+                    &-3 {}
+
+                    .step_number {
+                        span {}
+                    }
+
+                    .step_text {}
+                }
+            }
+        }
     }
 }

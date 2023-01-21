@@ -17,19 +17,6 @@
   --font-1: "Montserrat", sans-serif;
 }
 
-html body, html body * {
-  border: dashed 1px red;
-}
-html body section {
-  height: 100vh;
-  background-color: black;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 html body {
   width: 100vw;
   min-height: 100vh;
@@ -40,6 +27,10 @@ html body * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html body .txt-bold {
+  font-weight: bold;
 }
 
 @media (min-width: 0px) {
@@ -219,13 +210,119 @@ html body .filter-show {
 }
 
 @media (min-width: 0px) {
-  html body .main-home {
-    padding: 0 50px;
+  html body .main-home .section-hero {
+    min-height: 100vh;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    background-image: url("../img/pages/home/bg-hero.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100vw;
   }
-}
-@media (max-width: 768px) {
-  html body .main-home {
-    padding: 0 20px;
+  html body .main-home .section-hero .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  html body .main-home .section-hero .intro .txt-title {
+    font-family: var(--font-1);
+  }
+  html body .main-home .section-hero .intro .txt-title-2 {
+    display: none;
+  }
+  html body .main-home .section-hero .intro .txt-subtitle {
+    font-size: 22px;
+  }
+  html body .main-home .section-hero .intro .btn-continue {
+    background-color: var(--color-primary);
+    text-transform: uppercase;
+    font-size: 35px;
+    font-family: var(--font-1);
+    font-weight: bold;
+    color: var(--color-white-1);
+    border: none;
+    padding: 20px 90px;
+  }
+  html body .main-home .section-hero .intro .txt-compatibility {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    font-size: 18px;
+  }
+  html body .main-home .section-hero .intro .txt-compatibility-2 {
+    display: none;
+  }
+  html body .main-home .section-hero .intro .txt-compatibility .green_dot {
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+  }
+  html body .main-home .section-hero .content_type .list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  html body .main-home .section-hero .content_type .list .item {
+    list-style-type: none;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+    gap: 10px;
+  }
+  html body .main-home .section-hero .content_type .list .item i {
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  html body .main-home .section-hero .steps .txt-instructions {
+    display: none;
+  }
+  html body .main-home .section-hero .steps .list {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+  }
+  html body .main-home .section-hero .steps .list .item {
+    list-style-type: none;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  html body .main-home .section-hero .steps .list .item .step_number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  html body .main-home .section-hero .steps .list .item .step_number span {
+    font-size: 28px;
+    color: var(--color-white-1);
+  }
+  html body .main-home .section-hero .steps .list .item .step_text {
+    font-size: 20px;
   }
 }
 html body {
