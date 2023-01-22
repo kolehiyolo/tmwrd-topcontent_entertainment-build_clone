@@ -41,7 +41,7 @@ var paths = {
     // fonts: "build/fonts/",
   },
   src: {
-    html: "src/pages/*.html",
+    html: "src/*.html",
     partials: "src/partials/",
     img: "src/img/**/*.*",
     sass: "src/sass/index.scss",
@@ -54,7 +54,7 @@ var paths = {
     // jsSvg: "src/js/svg.js",
   },
   watch: {
-    html: "src/pages/*.html",
+    html: "src/*.html",
     partials: "src/partials",
     css: "src/sass/**/*.scss",
     img: "src/img/**/*.*",
