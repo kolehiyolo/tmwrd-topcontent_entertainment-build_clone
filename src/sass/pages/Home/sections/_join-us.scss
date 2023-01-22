@@ -1,4 +1,5 @@
 .section-join_us {
+
     &,
     * {
         // border: dashed 1px red;
@@ -13,6 +14,7 @@
             justify-content: center;
             width: 1000px;
             margin: 0 auto;
+            padding: 0 50px;
         }
 
         .content {
@@ -29,13 +31,12 @@
 
             .text {
                 display: flex;
-                    flex-direction: column;
-                    // justify-content: flex-start;
-                    gap: 20px;
+                flex-direction: column;
+                // justify-content: flex-start;
+                align-items: center;
+                gap: 20px;
 
-                h2 {
-
-                }
+                h2 {}
 
                 .list {
                     display: flex;
@@ -55,9 +56,7 @@
                             width: 30px;
                         }
 
-                        p {
-                            
-                        }
+                        p {}
                     }
                 }
             }
@@ -95,31 +94,33 @@
 
     // * Mobile Sizes
     @media (min-width: 0px) and (max-width: 640px) {
-        & {}
+        & {
+            width: 100%;
+            padding: 20px 20px;
+        }
 
         .content {
-            .text {
-                h2 {
+            flex-direction: column-reverse;
 
-                }
+            .text,
+            .img {
+                width: 100%;
+            }
+
+            .text {
+                h2 {}
 
                 .list {
                     .item {
-                        img {
+                        img {}
 
-                        }
-
-                        p {
-
-                        }
+                        p {}
                     }
                 }
             }
 
             .img {
-                img {
-
-                }
+                img {}
             }
         }
 
@@ -132,7 +133,36 @@
 
     // * Mid-tablet Size
     @media (min-width: 641px) and (max-width: 1000px) {
+        & {
+            width: 100%;
+        }
 
+        .content {
+            flex-direction: column-reverse;
+
+            .text,
+            .img {
+                width: 100%;
+            }
+
+            .text {
+                h2 {}
+
+                .list {
+                    .item {
+                        img {}
+
+                        p {}
+                    }
+                }
+            }
+
+            .img {
+                img {}
+            }
+        }
+
+        .button {}
     }
 
     // * Empty
@@ -141,32 +171,22 @@
 
         .content {
             .text {
-                h2 {
-
-                }
+                h2 {}
 
                 .list {
                     .item {
-                        img {
+                        img {}
 
-                        }
-
-                        p {
-
-                        }
+                        p {}
                     }
                 }
             }
 
             .img {
-                img {
-
-                }
+                img {}
             }
         }
 
-        .button {
-
-        }
+        .button {}
     }
 }
