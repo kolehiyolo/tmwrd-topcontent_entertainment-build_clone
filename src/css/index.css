@@ -214,6 +214,41 @@ html body .txt-bold {
     gap: 20px;
   }
 }
+@media (min-width: 0px) {
+  html body .popup-register {
+    position: absolute;
+    background-color: white;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+  }
+  html body .popup-register.popup-hidden {
+    opacity: 0;
+    z-index: -1;
+  }
+  html body .popup-register.popup-showing {
+    opacity: 1;
+    z-index: 200;
+  }
+}
+@media (min-width: 0px) {
+  html body .blur_filter {
+    position: absolute;
+    background-color: black;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  html body .blur_filter.blur_filter-hidden {
+    z-index: -1;
+    opacity: 0;
+  }
+  html body .blur_filter.blur_filter-showing {
+    z-index: 150;
+    opacity: 0.5;
+  }
+}
 html body {
   position: relative;
 }
