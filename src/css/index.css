@@ -920,6 +920,16 @@ html body .main-home .section-bundle_banner .body {
     width: 100%;
   }
 }
+@media (min-width: 0px) {
+  html body .main-home .section-terms {
+    padding: 0 50px 50px 50px;
+    width: 1200px;
+    margin: 0 auto;
+  }
+  html body .main-home .section-terms .text p {
+    font-size: 11px;
+  }
+}
 html body {
   display: flex;
   flex-direction: column;

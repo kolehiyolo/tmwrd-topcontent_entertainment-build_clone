@@ -6,7 +6,17 @@
 
     // * All Sizes
     @media (min-width: 0px) {
+        & {
+            padding: 0 50px 50px 50px;
+            width: 1200px;
+            margin: 0 auto;
+        }
 
+        .text {
+            p {
+                font-size: 11px;
+            }
+        }
     }
 
     // * Mobile Sizes
@@ -27,7 +37,7 @@
 
         .text {
             p {
-                
+
             }
         }
     }
