@@ -8,7 +8,7 @@
     // * All Sizes
     @media (min-width: 0px) {
         & {
-            background-color: var(--color-black-1);
+            background-color: var(--color-white-1);
             position: fixed;
             width: 100vw;
             z-index: 100;
@@ -21,9 +21,21 @@
             padding: 10px 50px;
 
             .logo {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;
+                text-decoration: none;
+
                 img {
                     display: block;
-                    width: 200px;
+                    width: 50px;
+                }
+
+                p {
+                    font-family: var(--font-1);
+                    color: var(--color-text);
+                    font-weight: bold;
                 }
             }
 
@@ -50,7 +62,7 @@
 
                         a {
                             text-decoration: none;
-                            color: var(--color-white-1);
+                            color: var(--color-text);
                             font-weight: bold;
                             transition: 0.2s all;
                             padding: 0 !important;
@@ -86,7 +98,7 @@
 
                             &:before {
                                 content: '';
-                                background-color: var(--color-white-1);
+                                background-color: var(--color-white-hover);
                                 display: block;
                                 width: 0;
                                 height: 3px;
@@ -111,7 +123,8 @@
 
             .menu_toggle {
                 display: none;
-                background-color: var(--color-white);
+                // background-color: var(--color-text);
+                background-color: var(--color-white-1);
                 border: none;
 
                 // i {
@@ -136,7 +149,7 @@
                     .line {
                         width: 30px;
                         height: 6px;
-                        background-color: var(--color-white-1);
+                        background-color: var(--color-text);
                         // border-radius: 5px;
                         position: relative;
                         top: 0;
@@ -169,11 +182,11 @@
     // * Mobile-Tablet
     @media (max-width: 768px) {
         .container {
-            padding: 10px 20px;
+            padding: 10px 20px !important;
 
             .logo {
                 img {
-                    width: 200px;
+                    width: 40px;
                 }
             }
 
@@ -190,7 +203,7 @@
         .container {
             .menu {
                 position: absolute;
-                background-color: var(--color-black-1);
+                background-color: var(--color-white-1); 
                 z-index: 100;
                 top: 100%;
                 // padding: 10px 50px 10px 20px;
@@ -225,21 +238,26 @@
     }
 
     // * Smaller Desktop    
-    @media (min-width: 1200px) {
+    @media (max-width: 1200px) {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        // gap: 50px;
 
         .container {
             width: 1200px;
             margin: 0 auto;
+            padding: 10px 30px;
+            // background-color: red !important;
 
             .logo {
                 img {}
             }
 
             .menu {
-                .list {}
+                .list {
+                    gap: 20px;
+                }
             }
 
             .menu_toggle {}

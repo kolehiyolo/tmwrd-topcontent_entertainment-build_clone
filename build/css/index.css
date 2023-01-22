@@ -30,7 +30,7 @@ html body .txt-bold {
 
 @media (min-width: 0px) {
   html body .header {
-    background-color: var(--color-black-1);
+    background-color: var(--color-white-1);
     position: fixed;
     width: 100vw;
     z-index: 100;
@@ -44,9 +44,24 @@ html body .txt-bold {
         justify-content: space-between;
     padding: 10px 50px;
   }
+  html body .header .container .logo {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    gap: 10px;
+    -ms-flex-align: center;
+        align-items: center;
+    text-decoration: none;
+  }
   html body .header .container .logo img {
     display: block;
-    width: 200px;
+    width: 50px;
+  }
+  html body .header .container .logo p {
+    font-family: var(--font-1);
+    color: var(--color-text);
+    font-weight: bold;
   }
   html body .header .container .menu {
     display: -ms-flexbox;
@@ -81,7 +96,7 @@ html body .txt-bold {
   }
   html body .header .container .menu .list li a {
     text-decoration: none;
-    color: var(--color-white-1);
+    color: var(--color-text);
     font-weight: bold;
     transition: 0.2s all;
     padding: 0 !important;
@@ -109,7 +124,7 @@ html body .txt-bold {
   }
   html body .header .container .menu .list li a:before {
     content: "";
-    background-color: var(--color-white-1);
+    background-color: var(--color-white-hover);
     display: block;
     width: 0;
     height: 3px;
@@ -128,7 +143,7 @@ html body .txt-bold {
   }
   html body .header .container .menu_toggle {
     display: none;
-    background-color: var(--color-white);
+    background-color: var(--color-white-1);
     border: none;
   }
   html body .header .container .menu_toggle .hamburger {
@@ -147,7 +162,7 @@ html body .txt-bold {
   html body .header .container .menu_toggle .hamburger .line {
     width: 30px;
     height: 6px;
-    background-color: var(--color-white-1);
+    background-color: var(--color-text);
     position: relative;
     top: 0;
     left: 0;
@@ -173,16 +188,16 @@ html body .txt-bold {
 }
 @media (max-width: 768px) {
   html body .header .container {
-    padding: 10px 20px;
+    padding: 10px 20px !important;
   }
   html body .header .container .logo img {
-    width: 200px;
+    width: 40px;
   }
 }
 @media (max-width: 992px) {
   html body .header .container .menu {
     position: absolute;
-    background-color: var(--color-black-1);
+    background-color: var(--color-white-1);
     z-index: 100;
     top: 100%;
     padding: 10px 120px 10px 20px;
@@ -211,7 +226,7 @@ html body .txt-bold {
     display: block;
   }
 }
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   html body .header {
     display: -ms-flexbox;
     display: flex;
@@ -223,6 +238,10 @@ html body .txt-bold {
   html body .header .container {
     width: 1200px;
     margin: 0 auto;
+    padding: 10px 30px;
+  }
+  html body .header .container .menu .list {
+    gap: 20px;
   }
 }
 html body.disable-scroll {
