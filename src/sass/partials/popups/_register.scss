@@ -1,4 +1,5 @@
 .popup-register {
+
     &,
     * {
         // border: dashed 1px red;
@@ -6,12 +7,20 @@
 
     // * All Sizes
     @media (min-width: 0px) {
-        position: absolute;
-        background-color: white;
-        top: 50vh;
-        left: 50vw;
-        transform: translate(-50%,-50%);
-        
+        & {
+            position: absolute;
+            background-color: white;
+            top: 50vh;
+            left: 50vw;
+            transform: translate(-50%, -50%);
+            width: 700px;
+            // margin: 20px;
+
+            display: flex;
+            flex-direction: row;
+            border-radius: 15px;
+        }
+
         &.popup-hidden {
             opacity: 0;
             z-index: -1;
@@ -21,41 +30,227 @@
             opacity: 1;
             z-index: 200;
         }
-    }
 
-    // * Mobile Sizes
-    @media (min-width: 0px) and (max-width: 640px) {
+        .instructions,
+        .form {
+            flex: 1 1 0;
+            width: 0;
+        }
 
-    }
+        .instructions {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            padding: 30px 40px 30px 40px;
 
-    // * Mid-tablet Size
-    @media (min-width: 641px) and (max-width: 1000px) {
-
-    }
-
-    // * Empty
-    @media (min-width: 10000000px) {
-        & {}
-
-        .text {
             .head {
                 p {
-                    span {
+                    text-align: center;
+                    font-size: 25px;
 
+                    span {
+                        display: block;
                     }
                 }
             }
 
             .body {
                 ol {
-                    li {
-                        &.item-done {
+                    display: flex;
+                        flex-direction: column;
+                        gap: 20px;
 
-                        }
+                    li {
+                        list-style-type: none;
+                        display: flex;
+                        flex-direction: row;
+                        gap: 20px;
+                        align-items: center;
+
+                        &.item-done {}
 
                         &.item-not-done {
-
+                            opacity: 0.5;
                         }
+
+                        .number {
+                            width: 40px;
+                            height: 40px;
+                            background-color: var(--color-text);
+                            border-radius: 50%;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: center;
+                            flex-shrink: 0;
+
+                            span {
+                                color: var(--color-white-1);
+                            }
+                        }
+
+                        .text {
+                            p {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            padding: 30px 40px 30px 40px;
+            gap: 20px;
+            background-color: var(--color-container-1);
+
+            .label {
+                text-align: center;
+                font-weight: bold;
+                font-size: 20px;
+
+                p {}
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: stretch;
+
+                .input {
+                    border: solid 1px var(--color-black-1);
+                    border-radius: 2px;
+                    padding: 10px 20px;
+
+                    &-email {}
+
+                    &-password {}
+                }
+
+                .btn-continue {
+                    background-color: var(--color-primary);
+                    text-transform: uppercase;
+                    font-size: 20px;
+                    font-family: var(--font-1);
+                    font-weight: bold;
+                    color: var(--color-white-1);
+                    border: none;
+                    padding: 15px 15px;
+                    transition: 0.5s all;
+                    text-align: center;
+    
+                    &:hover {
+                        background-color: var(--color-primary-lighter);
+                    }
+                }
+            }
+
+            .disclaimer {
+                text-align: center;
+                p {
+                    font-size: 14px;
+                    color: var(--color-white-hover);
+                }
+            }
+        }
+    }
+
+    // * Mobile Sizes
+    @media (min-width: 0px) and (max-width: 640px) {
+        & {
+            width: calc(100% - 40px);
+            margin: 20px;
+            left: 0;
+            transform: translate(0%, -50%);
+            flex-direction: column;
+        }
+
+        .instructions {
+            padding: 20px 20px;
+
+            .head {
+                p {
+                    span {}
+                }
+            }
+
+            .body {
+                ol {
+                    li {
+                        &.item-done {}
+
+                        &.item-not-done {}
+
+                        .number {
+                            span {}
+                        }
+
+                        .text {
+                            p {}
+                        }
+                    }
+                }
+            }
+        }
+
+        .form {
+            width: 100%;
+            padding: 20px 20px;
+
+            .label {
+                display: none;
+                p {}
+            }
+
+            form {
+                .input {
+                    &-email {}
+
+                    &-password {}
+
+                    .continue {}
+                }
+            }
+
+            .disclaimer {
+                p {}
+            }
+        }
+    }
+
+    // * Mid-tablet Size
+    @media (min-width: 640px) and (max-width: 740px) {
+        & {
+            width: calc(100% - 40px);
+            margin: 20px;
+            left: 0;
+            transform: translate(0%, -50%);
+        }
+    }
+
+    // * Empty
+    @media (min-width: 10000000px) {
+        & {}
+
+        .instructions {
+            .head {
+                p {
+                    span {}
+                }
+            }
+
+            .body {
+                ol {
+                    li {
+                        &.item-done {}
+
+                        &.item-not-done {}
 
                         .number {
                             span {}
@@ -71,19 +266,19 @@
 
         .form {
             .label {
-                p {
-
-                }
+                p {}
             }
+
             form {
                 .input {
                     &-email {}
-                    &-password {}
-                    .continue {
 
-                    }
+                    &-password {}
+
+                    .continue {}
                 }
             }
+
             .disclaimer {
                 p {}
             }
@@ -92,6 +287,7 @@
 }
 
 .blur_filter {
+
     &,
     * {
         // border: dashed 1px red;
@@ -105,7 +301,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        
+
         &.blur_filter-hidden {
             z-index: -1;
             opacity: 0;
@@ -113,22 +309,16 @@
 
         &.blur_filter-showing {
             z-index: 150;
-            opacity: 0.5;
+            opacity: 0.7;
         }
     }
 
     // * Mobile Sizes
-    @media (min-width: 0px) and (max-width: 640px) {
-
-    }
+    @media (min-width: 0px) and (max-width: 640px) {}
 
     // * Mid-tablet Size
-    @media (min-width: 641px) and (max-width: 1000px) {
-
-    }
+    @media (min-width: 641px) and (max-width: 1000px) {}
 
     // * Empty
-    @media (min-width: 10000000px) {
-
-    }
+    @media (min-width: 10000000px) {}
 }

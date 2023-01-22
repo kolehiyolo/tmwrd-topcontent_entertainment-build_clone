@@ -252,6 +252,12 @@ html body .txt-bold {
     left: 50vw;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+    width: 700px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    border-radius: 15px;
   }
   html body .popup-register.popup-hidden {
     opacity: 0;
@@ -260,6 +266,154 @@ html body .txt-bold {
   html body .popup-register.popup-showing {
     opacity: 1;
     z-index: 200;
+  }
+  html body .popup-register .instructions,
+html body .popup-register .form {
+    -ms-flex: 1 1 0px;
+        flex: 1 1 0;
+    width: 0;
+  }
+  html body .popup-register .instructions {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 30px 40px 30px 40px;
+  }
+  html body .popup-register .instructions .head p {
+    text-align: center;
+    font-size: 25px;
+  }
+  html body .popup-register .instructions .head p span {
+    display: block;
+  }
+  html body .popup-register .instructions .body ol {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    gap: 20px;
+  }
+  html body .popup-register .instructions .body ol li {
+    list-style-type: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    gap: 20px;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  html body .popup-register .instructions .body ol li.item-not-done {
+    opacity: 0.5;
+  }
+  html body .popup-register .instructions .body ol li .number {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-text);
+    border-radius: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  html body .popup-register .instructions .body ol li .number span {
+    color: var(--color-white-1);
+  }
+  html body .popup-register .instructions .body ol li .text p {
+    font-size: 18px;
+  }
+  html body .popup-register .form {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: stretch;
+        align-items: stretch;
+    padding: 30px 40px 30px 40px;
+    gap: 20px;
+    background-color: var(--color-container-1);
+  }
+  html body .popup-register .form .label {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  html body .popup-register .form form {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    gap: 10px;
+    -ms-flex-align: stretch;
+        align-items: stretch;
+  }
+  html body .popup-register .form form .input {
+    border: solid 1px var(--color-black-1);
+    border-radius: 2px;
+    padding: 10px 20px;
+  }
+  html body .popup-register .form form .btn-continue {
+    background-color: var(--color-primary);
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: var(--font-1);
+    font-weight: bold;
+    color: var(--color-white-1);
+    border: none;
+    padding: 15px 15px;
+    transition: 0.5s all;
+    text-align: center;
+  }
+  html body .popup-register .form form .btn-continue:hover {
+    background-color: var(--color-primary-lighter);
+  }
+  html body .popup-register .form .disclaimer {
+    text-align: center;
+  }
+  html body .popup-register .form .disclaimer p {
+    font-size: 14px;
+    color: var(--color-white-hover);
+  }
+}
+@media (min-width: 0px) and (max-width: 640px) {
+  html body .popup-register {
+    width: calc(100% - 40px);
+    margin: 20px;
+    left: 0;
+    -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  html body .popup-register .instructions {
+    padding: 20px 20px;
+  }
+  html body .popup-register .form {
+    width: 100%;
+    padding: 20px 20px;
+  }
+  html body .popup-register .form .label {
+    display: none;
+  }
+}
+@media (min-width: 640px) and (max-width: 740px) {
+  html body .popup-register {
+    width: calc(100% - 40px);
+    margin: 20px;
+    left: 0;
+    -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
   }
 }
 @media (min-width: 0px) {
@@ -277,7 +431,7 @@ html body .txt-bold {
   }
   html body .blur_filter.blur_filter-showing {
     z-index: 150;
-    opacity: 0.5;
+    opacity: 0.7;
   }
 }
 html body {
