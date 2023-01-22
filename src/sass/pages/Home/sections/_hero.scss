@@ -53,6 +53,11 @@
                 color: var(--color-white-1);
                 border: none;
                 padding: 20px 90px;
+                transition: 0.5s all;
+
+                &:hover {
+                    background-color: var(--color-primary-lighter);
+                }
             }
 
             .txt-compatibility {

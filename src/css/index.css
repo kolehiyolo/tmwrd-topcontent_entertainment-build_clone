@@ -7,12 +7,10 @@
   --color-white-2: #e6e6e6;
   --color-white-hover: #cccccc;
   --color-black-1: #333232;
+  --color-stroke: #b0b7ca;
   --font-1: "Montserrat", sans-serif;
 }
 
-html body, html body * {
-  border: dashed 1px red;
-}
 html body {
   width: 100vw;
   min-height: 100vh;
@@ -267,6 +265,10 @@ html body .filter-show {
     color: var(--color-white-1);
     border: none;
     padding: 20px 90px;
+    transition: 0.5s all;
+  }
+  html body .main-home .section-hero .intro .btn-continue:hover {
+    background-color: var(--color-primary-lighter);
   }
   html body .main-home .section-hero .intro .txt-compatibility {
     display: flex;
@@ -439,8 +441,95 @@ html body .filter-show {
     width: 150px;
   }
 }
-html body .main-home .section-about {
-  min-height: 100vh;
+@media (min-width: 0px) {
+  html body .main-home .section-about {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 50px 50px;
+  }
+  html body .main-home .section-about .text {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+  }
+  html body .main-home .section-about .text .head h2 {
+    text-align: center;
+  }
+  html body .main-home .section-about .text .body {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+  html body .main-home .section-about .text .body p {
+    flex: 1 1 0;
+    width: 0;
+  }
+  html body .main-home .section-about .text .body img {
+    flex: 1 1 0;
+    width: 0;
+  }
+  html body .main-home .section-about .cards .list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+  html body .main-home .section-about .cards .list .item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    flex: 1 1 0px;
+    width: 0;
+    background-color: var(--color-container-1);
+    box-shadow: 0 5px 5px var(--color-black-1);
+  }
+  html body .main-home .section-about .cards .list .item .head {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  html body .main-home .section-about .cards .list .item .head i {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: var(--color-stroke);
+  }
+  html body .main-home .section-about .cards .list .item .head h3 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  html body .main-home .section-about .button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  html body .main-home .section-about .button .btn-continue {
+    background-color: var(--color-primary);
+    text-transform: uppercase;
+    font-size: 35px;
+    font-family: var(--font-1);
+    font-weight: bold;
+    color: var(--color-white-1);
+    border: none;
+    padding: 20px 90px;
+    transition: 0.5s all;
+  }
+  html body .main-home .section-about .button .btn-continue:hover {
+    background-color: var(--color-primary-lighter);
+  }
 }
 html body {
   display: flex;
