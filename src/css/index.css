@@ -1,6 +1,6 @@
 :root {
-  --color-primary: #01C77C;
-  --color-primary-lighter: #2de9a1;
+  --color-primary: #015dc7;
+  --color-primary-lighter: #2d8ee9;
   --color-text: #2f2c2c;
   --color-container-1: #f5f5f5;
   --color-white-1: #ffffff;
@@ -424,7 +424,7 @@ html body .filter-show {
     justify-content: center;
     align-items: center;
     gap: 100px;
-    background-image: url("../img/pages/home/bg-hero.png");
+    background-image: url("../img/pages/home/bg-hero.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100vw;
