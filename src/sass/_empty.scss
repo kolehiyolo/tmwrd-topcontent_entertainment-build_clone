@@ -1,4 +1,4 @@
-.footer {
+.test {
     &,
     * {
         // border: dashed 1px red;
@@ -9,42 +9,18 @@
 
     }
 
-    // * Mobile-Tablet
-    @media (max-width: 768px) {}
-
-    // * Collapsed Footer
-    @media (max-width: 992px) {
+    // * Mobile Sizes
+    @media (min-width: 0px) and (max-width: 640px) {
 
     }
 
-    // * Smaller Desktop    
-    @media (min-width: 1200px) {
-        
+    // * Mid-tablet Size
+    @media (min-width: 641px) and (max-width: 1000px) {
+
     }
 
     // * Empty
-    @media (min-width: 10000px) {
-        &-container {
-            &-logo {
-                img {
+    @media (min-width: 10000000px) {
 
-                }
-            }
-
-            &-copyright {
-                small {
-
-                }
-            }
-            &-links {
-                &-list {
-                    li {
-                        a {
-
-                        }
-                    }
-                }
-            }
-        }
     }
 }
