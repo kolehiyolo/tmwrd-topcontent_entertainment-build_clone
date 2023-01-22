@@ -869,6 +869,7 @@ html body .main-home .section-bundle_banner .body {
     display: flex;
     flex-direction: column;
     background-color: var(--color-container-1);
+    box-shadow: 0 0 5px var(--color-stroke);
   }
   html body .main-home .section-content_tiles .list .item .text {
     text-align: center;
