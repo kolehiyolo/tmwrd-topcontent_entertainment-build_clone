@@ -63,7 +63,10 @@ html {
     body {
         &.disable-scroll {
             overflow-y: hidden;
-        }
+        }        
+
+        // Need this so that filter will cover the entire page
+        position: relative;
 
         .filter {
             width: 100vw;

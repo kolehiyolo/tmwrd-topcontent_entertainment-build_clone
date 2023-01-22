@@ -244,6 +244,9 @@ html body .txt-bold {
     gap: 20px;
   }
 }
+html body {
+  position: relative;
+}
 html body.disable-scroll {
   overflow-y: hidden;
 }
