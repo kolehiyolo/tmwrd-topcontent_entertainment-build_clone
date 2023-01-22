@@ -8,12 +8,10 @@
   --color-white-hover: #cccccc;
   --color-black-1: #333232;
   --color-stroke: #b0b7ca;
+  --gradient-sky: linear-gradient(0deg, #b7e4f9, #e1f3fd);
   --font-1: "Montserrat", sans-serif;
 }
 
-html body, html body * {
-  border: dashed 1px red;
-}
 html body {
   width: 100vw;
   min-height: 100vh;
@@ -615,6 +613,7 @@ html body .main-home .section-about .body img {
   }
   html body .main-home .section-content .list .item {
     display: flex;
+    background-image: var(--gradient-sky);
   }
   html body .main-home .section-content .list .item-movies, html body .main-home .section-content .list .item-games {
     flex-direction: row;
@@ -631,6 +630,7 @@ html body .main-home .section-content .list .item .image {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 50px;
   }
   html body .main-home .section-content .list .item .image {
     flex: 1 1 0px;
