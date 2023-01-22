@@ -7,7 +7,9 @@
 
     // * All Sizes
     @media (min-width: 0px) {
-        & {}
+        & {
+            padding: 50px 0px 50px 0px;
+        }
 
         .list {
             display: flex;
@@ -68,10 +70,87 @@
     }
 
     // * Mobile Sizes
-    @media (min-width: 0px) and (max-width: 640px) {}
+    @media (min-width: 0px) and (max-width: 640px) {
+        & {}
+
+        .list {
+            .item {
+                &-movies {}
+
+                &-music {}
+
+                &-games {}
+
+                &-audiobooks {}
+
+                &-movies,
+                &-games {
+                }
+
+                &-music,
+                &-audiobooks {
+                }
+
+                .text,
+                .image {
+                }
+
+                .text {
+                    h3 {}
+
+                    p {}
+                }
+
+                .image {
+                    display: none;
+
+                    img {
+                    }
+                }
+            }
+        }
+    }
 
     // * Mid-tablet Size
-    @media (min-width: 641px) and (max-width: 1000px) {}
+    @media (min-width: 641px) and (max-width: 765px) {
+        & {}
+
+        .list {
+            .item {
+                &-movies {}
+
+                &-music {}
+
+                &-games {}
+
+                &-audiobooks {}
+
+                &-movies,
+                &-games {
+                }
+
+                &-music,
+                &-audiobooks {
+                }
+
+                .text,
+                .image {
+                }
+
+                .text {
+                    h3 {}
+
+                    p {}
+                }
+
+                .image {
+                    display: none;
+                    img {
+                    }
+                }
+            }
+        }
+    }
 
     // * Empty
     @media (min-width: 10000000px) {

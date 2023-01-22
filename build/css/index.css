@@ -707,6 +707,9 @@ html body .main-home .section-about .body img {
   }
 }
 @media (min-width: 0px) {
+  html body .main-home .section-content {
+    padding: 50px 0px 50px 0px;
+  }
   html body .main-home .section-content .list {
     display: -ms-flexbox;
     display: flex;
@@ -748,6 +751,16 @@ html body .main-home .section-content .list .item .image {
   }
   html body .main-home .section-content .list .item .image img {
     width: 100%;
+  }
+}
+@media (min-width: 0px) and (max-width: 640px) {
+  html body .main-home .section-content .list .item .image {
+    display: none;
+  }
+}
+@media (min-width: 641px) and (max-width: 765px) {
+  html body .main-home .section-content .list .item .image {
+    display: none;
   }
 }
 html body {
