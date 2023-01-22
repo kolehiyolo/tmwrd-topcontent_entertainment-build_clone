@@ -25,6 +25,8 @@ html {
 
 // * Overall Styling
 html {
+    scroll-behavior: auto !important;
+
     body {
         // -* Removing default margin+padding and establishing border-box box-sizing for easier box-styling
         &,

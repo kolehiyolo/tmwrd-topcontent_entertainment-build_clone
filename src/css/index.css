@@ -12,6 +12,9 @@
   --font-1: "Montserrat", sans-serif;
 }
 
+html {
+  scroll-behavior: auto !important;
+}
 html body {
   width: 100vw;
   min-height: 100vh;
@@ -72,41 +75,26 @@ html body .txt-bold {
   }
   html body .header .container .menu .list li {
     list-style-type: none;
-    padding: 0px 0px;
+    padding: 5px 0px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  html body .header .container .menu .list li a {
+  html body .header .container .menu .list li button {
     text-decoration: none;
     color: var(--color-text);
     font-weight: bold;
     transition: 0.2s all;
-    padding: 0 !important;
+    padding: 0px;
     text-transform: uppercase;
+    border: none;
+    background-color: transparent;
   }
-  html body .header .container .menu .list li a:hover {
+  html body .header .container .menu .list li button:hover {
     color: var(--color-white-hover);
   }
-  html body .header .container .menu .list li a.link-register .register-btn {
-    border: solid 4px var(--color-primary);
-    background-color: transparent;
-    padding: 5px 20px;
-    color: var(--color-primary);
-    text-transform: uppercase;
-    transition: 0.25s all;
-  }
-  html body .header .container .menu .list li a.link-register:before {
-    content: "";
-    background-color: transparent;
-    display: block;
-  }
-  html body .header .container .menu .list li a.link-register:hover .register-btn {
-    border: solid 4px var(--color-primary-lighter);
-    color: var(--color-primary-lighter);
-  }
-  html body .header .container .menu .list li a:before {
+  html body .header .container .menu .list li button:before {
     content: "";
     background-color: var(--color-white-hover);
     display: block;
@@ -122,8 +110,25 @@ html body .txt-bold {
     margin: auto;
     bottom: 0;
   }
-  html body .header .container .menu .list li a:hover:before {
+  html body .header .container .menu .list li button:hover:before {
     width: 100%;
+  }
+  html body .header .container .menu .list li.item-register .register-btn {
+    border: solid 4px var(--color-primary);
+    background-color: transparent;
+    padding: 5px 20px;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    transition: 0.25s all;
+  }
+  html body .header .container .menu .list li.item-register .register-btn:before {
+    content: "";
+    background-color: transparent;
+    display: block;
+  }
+  html body .header .container .menu .list li.item-register:hover .register-btn {
+    border: solid 4px var(--color-primary-lighter);
+    color: var(--color-primary-lighter);
   }
   html body .header .container .menu_toggle {
     display: none;

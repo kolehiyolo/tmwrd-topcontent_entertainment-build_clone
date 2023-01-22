@@ -32,7 +32,7 @@
     
     <body>
         <header class="header">
-            <div class="container"> <a class="logo" href="/">
+            <div class="container"> <a class="logo" onclick="showPopup()">
 
             <img src="../svg/partials/header/logo.svg" alt="Website Logo">
 
@@ -41,21 +41,23 @@
         </a>
                 <nav class="menu hidden">
                     <ul class="list">
-                        <li class="item-home item"> <a class="link-home link" href="/">Home</a>
+                        <li class="item-home item">
+                            <button class="link-home link" onclick="showPopup()">Home</button>
                         </li>
-                        <li class="item-movies item"> <a class="link-movies link" href="/">Movies</a>
+                        <li class="item-movies item">
+                            <button class="link-movies link" onclick="showPopup()">Movies</button>
                         </li>
-                        <li class="item-music item"> <a class="link-music link" href="/">Music</a>
+                        <li class="item-music item">
+                            <button class="link-music link" onclick="showPopup()">Music</button>
                         </li>
-                        <li class="item-games item"> <a class="link-games link" href="/">Games</a>
+                        <li class="item-games item">
+                            <button class="link-games link" onclick="showPopup()">Games</button>
                         </li>
-                        <li class="item-audiobooks item"> <a class="link-audiobooks link" href="/">Audiobooks</a>
+                        <li class="item-audiobooks item">
+                            <button class="link-audiobooks link" onclick="showPopup()">Audiobooks</button>
                         </li>
-                        <li class="item-register item"> <a class="link-register link" href="/">
-
-                        <button class="register-btn">Register</button>
-
-                    </a>
+                        <li class="item-register item">
+                            <button class="register-btn" onclick="showPopup()">Register</button>
                         </li>
                     </ul>
                 </nav>
@@ -165,7 +167,7 @@
                     </ul>
                 </div>
                 <div class="button">
-                    <button class="btn-continue">Continue</button>
+                    <button class="btn-continue" onclick="showPopup()">Continue</button>
                 </div>
             </section>
             <section class="section-content">
@@ -255,7 +257,7 @@
                     </div>
                 </div>
                 <div class="button">
-                    <button class="btn-continue">Continue</button>
+                    <button class="btn-continue" onclick="showPopup()">Continue</button>
                 </div>
             </section>
             <section class="section-content_cards">
