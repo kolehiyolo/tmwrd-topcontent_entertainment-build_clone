@@ -21,6 +21,32 @@
 
     // * Empty
     @media (min-width: 10000000px) {
+        & {
 
+        }
+
+        .list {
+            .item {
+                &-movies {}
+                &-music {}
+                &-games {}
+                &-audiobooks {}
+
+                &-movies,
+                &-games {}
+
+                &-music,
+                &-audiobooks {}
+
+                .text {
+                    h3 {}
+                    p {}
+                }
+
+                .image {
+                    img {}
+                }
+            }
+        }
     }
 }
