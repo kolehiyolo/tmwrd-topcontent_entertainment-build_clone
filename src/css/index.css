@@ -788,6 +788,24 @@ html body .main-home .section-join_us .content .img {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    text-align: center;
+  }
+}
+@media (min-width: 0px) and (max-width: 990px) {
+  html body .main-home .section-content_cards {
+    width: 100%;
+    padding: 50px 20px 50px 20px;
+  }
+  html body .main-home .section-content_cards .list {
+    flex-direction: column;
+  }
+  html body .main-home .section-content_cards .list .item {
+    width: 100%;
+  }
+}
+@media (min-width: 990px) and (max-width: 1200px) {
+  html body .main-home .section-content_cards {
+    width: 100%;
   }
 }
 html body {

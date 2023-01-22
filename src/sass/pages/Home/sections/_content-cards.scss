@@ -58,6 +58,7 @@
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
+                    text-align: center;
 
                     h3 {}
 
@@ -68,10 +69,67 @@
     }
 
     // * Mobile Sizes
-    @media (min-width: 0px) and (max-width: 640px) {}
+    @media (min-width: 0px) and (max-width: 990px) {
+        & {
+            width: 100%;
+            padding: 50px 20px 50px 20px;
+        }
+
+        .list {
+            flex-direction: column;
+
+            .item {
+                width: 100%;
+
+                &-movies {}
+
+                &-music {}
+
+                &-games {}
+
+                &-audibooks {}
+
+                .img {
+                    i {}
+                }
+
+                .text {
+                    h3 {}
+
+                    p {}
+                }
+            }
+        }
+    }
 
     // * Mid-tablet Size
-    @media (min-width: 641px) and (max-width: 1000px) {}
+    @media (min-width: 990px) and (max-width: 1200px) {
+        & {
+            width: 100%;
+        }
+
+        .list {
+            .item {
+                &-movies {}
+
+                &-music {}
+
+                &-games {}
+
+                &-audibooks {}
+
+                .img {
+                    i {}
+                }
+
+                .text {
+                    h3 {}
+
+                    p {}
+                }
+            }
+        }
+    }
 
     // * Empty
     @media (min-width: 10000000px) {
