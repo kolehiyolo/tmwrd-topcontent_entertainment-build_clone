@@ -1,8 +1,9 @@
 .main-home {
-    @import "sections/Hero";
-    @import "sections/About";
-    @import "sections/Features";
-    @import "sections/Content";
+    @import "sections/hero";
+    @import "sections/about";
+    @import "sections/features";
+    @import "sections/content";
+    @import "sections/join-us";
     // @import "sections/Steps";
     // @import "sections/HowItWorks";
     // @import "sections/SearchWith";
