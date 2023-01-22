@@ -6,12 +6,128 @@
 
     // * All Sizes
     @media (min-width: 0px) {
+        & {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+            width: 1000px;
+            margin: 0 auto;
+        }
 
+        .content {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 20px;
+            justify-content: center;
+
+            .text,
+            .img {
+                flex: 1 1 0;
+                width: 0;
+            }
+
+            .text {
+                display: flex;
+                    flex-direction: column;
+                    // justify-content: flex-start;
+                    gap: 20px;
+
+                h2 {
+
+                }
+
+                .list {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    gap: 20px;
+
+                    .item {
+                        list-style-type: none;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        // justify-content: flex-start;
+                        gap: 20px;
+
+                        img {
+                            width: 30px;
+                        }
+
+                        p {
+                            
+                        }
+                    }
+                }
+            }
+
+            .img {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .btn-continue {
+                background-color: var(--color-primary);
+                text-transform: uppercase;
+                font-size: 35px;
+                font-family: var(--font-1);
+                font-weight: bold;
+                color: var(--color-white-1);
+                border: none;
+                padding: 20px 90px;
+                transition: 0.5s all;
+
+                &:hover {
+                    background-color: var(--color-primary-lighter);
+                }
+            }
+        }
     }
 
     // * Mobile Sizes
     @media (min-width: 0px) and (max-width: 640px) {
+        & {}
 
+        .content {
+            .text {
+                h2 {
+
+                }
+
+                .list {
+                    .item {
+                        img {
+
+                        }
+
+                        p {
+
+                        }
+                    }
+                }
+            }
+
+            .img {
+                img {
+
+                }
+            }
+        }
+
+        .button {
+            .btn-continue {
+                padding: 10px 50px;
+            }
+        }
     }
 
     // * Mid-tablet Size
@@ -21,6 +137,36 @@
 
     // * Empty
     @media (min-width: 10000000px) {
+        & {}
 
+        .content {
+            .text {
+                h2 {
+
+                }
+
+                .list {
+                    .item {
+                        img {
+
+                        }
+
+                        p {
+
+                        }
+                    }
+                }
+            }
+
+            .img {
+                img {
+
+                }
+            }
+        }
+
+        .button {
+
+        }
     }
 }
