@@ -1,8 +1,8 @@
 // Importing other js files
-$(`.header-container-menu_toggle`).click(function(){
-    if($(`.header-container-menu`).hasClass(`hidden`)) {
-        $(`.header-container-menu`).removeClass(`hidden`);
-        $(`.header-container-menu`).addClass(`show`);
+$(`.header .container .menu_toggle`).click(function(){
+    if($(`.header .container .menu`).hasClass(`hidden`)) {
+        $(`.header .container .menu`).removeClass(`hidden`);
+        $(`.header .container .menu`).addClass(`show`);
         $(`body`).addClass(`disable-scroll`);
 
         $(`.filter`).removeClass(`filter-hidden`);
@@ -12,8 +12,8 @@ $(`.header-container-menu_toggle`).click(function(){
             $(`.filter`).removeClass(`filter-fade_in`);
         }, 350);
     } else {
-        $(`.header-container-menu`).removeClass(`show`);
-        $(`.header-container-menu`).addClass(`hidden`);
+        $(`.header .container .menu`).removeClass(`show`);
+        $(`.header .container .menu`).addClass(`hidden`);
         $(`body`).removeClass(`disable-scroll`);
 
         $(`.filter`).removeClass(`filter-show`);
@@ -23,6 +23,8 @@ $(`.header-container-menu_toggle`).click(function(){
             $(`.filter`).addClass(`filter-hidden`);
         }, 350);
     };
+
+    $(this).toggleClass("is-active");
   });
 //?= main.js
 //?= svg.js

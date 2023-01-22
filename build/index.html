@@ -37,17 +37,17 @@
         </a>
                 <nav class="menu hidden">
                     <ul class="list">
-                        <li class="item"> <a class="link-home link" href="/">Home</a>
+                        <li class="item-home item"> <a class="link-home link" href="/">Home</a>
                         </li>
-                        <li class="item"> <a class="link-movies link" href="/">Movies</a>
+                        <li class="item-movies item"> <a class="link-movies link" href="/">Movies</a>
                         </li>
-                        <li class="item"> <a class="link-music link" href="/">Music</a>
+                        <li class="item-music item"> <a class="link-music link" href="/">Music</a>
                         </li>
-                        <li class="item"> <a class="link-games link" href="/">Games</a>
+                        <li class="item-games item"> <a class="link-games link" href="/">Games</a>
                         </li>
-                        <li class="item"> <a class="link-audiobooks link" href="/">Audiobooks</a>
+                        <li class="item-audiobooks item"> <a class="link-audiobooks link" href="/">Audiobooks</a>
                         </li>
-                        <li class="item"> <a class="link-register link" href="/">
+                        <li class="item-register item"> <a class="link-register link" href="/">
 
                         <button class="register-btn">Register</button>
 
@@ -55,7 +55,12 @@
                         </li>
                     </ul>
                 </nav>
-                <button class="menu_toggle hidden"> <i class="bi bi-list"></i>
+                <button class="menu_toggle hidden">
+                    <!-- <i class="bi bi-list"></i> -->
+                    <div class="hamburger" id="hamburger-1"> <span class="line line-1"></span> <span class="line line-2"></span>
+                        <span
+                        class="line line-3"></span>
+                    </div>
                 </button>
             </div>
         </header>
@@ -111,7 +116,17 @@
                 </div>
             </section>
             <section class="section-about">
-                 <h1>About Section</h1>
+                <div class="text">
+                    <div class="head">
+                         <h2>Endless movies, music sports, audiobooks, games and more!</h2>
+                    </div>
+                    <div class="body">
+                        <p></p>
+                        <img src="../img/pages/home/section_about-graphic.png" alt="Endless movies, music, sports, audiobooks, games and more!">
+                    </div>
+                </div>
+                <div class="cards"></div>
+                <div class="button"></div>
             </section>
             <section class="section-features">
                  <h1>Features Section</h1>
@@ -155,12 +170,12 @@
         </div>
     </div>
 </footer> -->
-        <!-- <!-- * Bootstrap JavaScript CDN -->
+        <!-- * Bootstrap JavaScript CDN -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-        <script src="js/index.min.js"></script>-->
-        <!-- <div class="filter filter-hidden"></div> -->
+        <script src="js/index.min.js"></script>
+        <div class="filter filter-hidden"></div>
     </body>
 
 </html>

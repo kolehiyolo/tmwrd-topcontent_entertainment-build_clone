@@ -1,0 +1,28 @@
+.section-about {
+    &,
+    * {
+        // border: dashed 1px red;
+    }
+
+    min-height: 100vh;
+
+    // * All Sizes
+    @media (min-width: 0px) {
+
+    }
+
+    // * Mobile Sizes
+    @media (min-width: 0px) and (max-width: 640px) {
+
+    }
+
+    // * Mid-tablet Size
+    @media (min-width: 641px) and (max-width: 992px) {
+
+    }
+
+    // * Empty
+    @media (min-width: 10000000px) {
+
+    }
+}

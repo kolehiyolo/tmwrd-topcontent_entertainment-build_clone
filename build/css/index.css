@@ -10,6 +10,9 @@
   --font-1: "Montserrat", sans-serif;
 }
 
+html body, html body * {
+  border: dashed 1px red;
+}
 html body {
   width: 100vw;
   min-height: 100vh;
@@ -129,7 +132,9 @@ html body .txt-bold {
     background-color: var(--color-white);
     border: none;
   }
-  html body .header .container .menu_toggle i {
+  html body .header .container .menu_toggle .hamburger {
+    width: 30px;
+    height: 30px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -138,8 +143,33 @@ html body .txt-bold {
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    font-size: 40px;
-    color: var(--color-blue-1);
+    gap: 6px;
+  }
+  html body .header .container .menu_toggle .hamburger .line {
+    width: 30px;
+    height: 6px;
+    background-color: var(--color-white-1);
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: translate(0, 0) rotate(180deg);
+            transform: translate(0, 0) rotate(180deg);
+    transition: 0.5s all;
+  }
+  html body .header .container .menu_toggle.is-active .line-1 {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(135deg);
+            transform: translate(0, -50%) rotate(135deg);
+  }
+  html body .header .container .menu_toggle.is-active .line-2 {
+    width: 0;
+  }
+  html body .header .container .menu_toggle.is-active .line-3 {
+    top: -50%;
+    -webkit-transform: translate(0, 50%) rotate(225deg);
+            transform: translate(0, 50%) rotate(225deg);
   }
 }
 @media (max-width: 768px) {
@@ -147,16 +177,16 @@ html body .txt-bold {
     padding: 10px 20px;
   }
   html body .header .container .logo img {
-    width: 100px;
+    width: 200px;
   }
 }
 @media (max-width: 992px) {
   html body .header .container .menu {
     position: absolute;
-    background-color: var(--color-white);
+    background-color: var(--color-black-1);
     z-index: 100;
     top: 100%;
-    padding: 10px 50px 10px 20px;
+    padding: 10px 120px 10px 20px;
     height: 100vh;
     -ms-flex-direction: column;
         flex-direction: column;
@@ -191,12 +221,11 @@ html body .txt-bold {
     -ms-flex-pack: center;
         justify-content: center;
   }
-  html body .headercontainer {
+  html body .header .container {
     width: 1200px;
     margin: 0 auto;
   }
 }
-
 html body.disable-scroll {
   overflow-y: hidden;
 }
@@ -475,6 +504,9 @@ html body .filter-show {
   html body .main-home .section-hero .steps .list .item {
     width: 150px;
   }
+}
+html body .main-home .section-about {
+  min-height: 100vh;
 }
 html body {
   display: -ms-flexbox;
