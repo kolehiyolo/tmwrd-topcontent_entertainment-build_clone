@@ -465,6 +465,7 @@ html body .filter-show {
     flex-direction: row;
     gap: 20px;
     justify-content: center;
+    align-items: center;
   }
   html body .main-home .section-about .text .body p {
     flex: 1 1 0;
@@ -484,7 +485,7 @@ html body .filter-show {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 20px;
     flex: 1 1 0px;
     width: 0;
@@ -529,6 +530,63 @@ html body .filter-show {
   }
   html body .main-home .section-about .button .btn-continue:hover {
     background-color: var(--color-primary-lighter);
+  }
+}
+@media (min-width: 0px) and (max-width: 640px) {
+  html body .main-home .section-about {
+    width: 100%;
+    padding: 20px;
+  }
+  html body .main-home .section-about .text {
+    gap: 30px;
+  }
+  html body .main-home .section-about .text .body {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+  html body .main-home .section-about .text .body p, html body .main-home .section-about .text .body img {
+    width: 100%;
+  }
+  html body .main-home .section-about .cards .list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+  html body .main-home .section-about .cards .list .item {
+    padding: 20px 15px;
+    gap: 15px;
+    width: 100%;
+  }
+  html body .main-home .section-about .cards .list .item .head {
+    gap: 10px;
+  }
+  html body .main-home .section-about .cards .list .item .head i {
+    font-size: 25px;
+  }
+  html body .main-home .section-about .cards .list .item .head h3 {
+    font-size: 18px;
+  }
+  html body .main-home .section-about .button .btn-continue {
+    padding: 10px 50px;
+  }
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+  html body .main-home .section-about {
+    width: 100%;
+  }
+  html body .main-home .section-about .cards .list .item {
+    padding: 20px 15px;
+    gap: 15px;
+  }
+  html body .main-home .section-about .cards .list .item .head {
+    gap: 10px;
+  }
+  html body .main-home .section-about .cards .list .item .head i {
+    font-size: 25px;
+  }
+  html body .main-home .section-about .cards .list .item .head h3 {
+    font-size: 18px;
   }
 }
 html body {
