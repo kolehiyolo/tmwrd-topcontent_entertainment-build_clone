@@ -53,7 +53,7 @@ html {
 // * Importing site-wide partials
 html {
     body {
-        @import "partials/Header";
+        @import "partials/macro/Header";
         // @import "partials/Footer";
     }
 }
@@ -104,7 +104,7 @@ html {
 // * Import pages
 html {
     body {
-        @import "pages/Home/Home";
+        @import "partials/pages/Home/Home";
         // @import "pages/Terms & Conditions/TnC";
     }
 }
