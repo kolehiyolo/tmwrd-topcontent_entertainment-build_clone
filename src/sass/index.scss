@@ -58,6 +58,14 @@ html {
     }
 }
 
+// * Importing pop-ups
+html {
+    body {
+        @import "partials/popups/register";
+        // @import "partials/Footer";
+    }
+}
+
 // * Managing the full-body filter when modals/pop-ups/slider show
 html {
     body {
