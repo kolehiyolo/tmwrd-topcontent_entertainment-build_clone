@@ -24,6 +24,11 @@ const rename = require("gulp-rename"); // ! TODO WHAT
 const htmlpartial = require("gulp-html-partial"); // For Compiling HTML "<partial></partial>" Partials
 const rigger = require("gulp-rigger"); // For Compiling HTML "//=" Partials
 
+// * Processing SVGs
+const svgmin = require("gulp-svgmin");
+const svgstore = require("gulp-svgstore");
+const svg2string = require("gulp-svg2string");
+
 // * Paths Variables
 // -* Paths to source files (src), to ready-made files (build), as well as to those whose changes need to be monitored (watch)
 var paths = {
@@ -32,6 +37,7 @@ var paths = {
     img: "build/img/",
     css: "build/css/",
     js: "build/js/",
+    svg: "build/svg",
     // fonts: "build/fonts/",
   },
   src: {
@@ -40,12 +46,11 @@ var paths = {
     img: "src/img/**/*.*",
     sass: "src/sass/index.scss",
     js: "src/js/index.js",
+    svg: "src/svg/**/*.*",
     // style: "src/sass/common.scss",
     // buildFiles: "build/**",
     // build: "build/",
     // fonts: "src/fonts/**/*.*",
-    // svgSrc: "src/svg/src/**/*.*",
-    // svgDist: "src/svg/dist/",
     // jsSvg: "src/js/svg.js",
   },
   watch: {
@@ -54,6 +59,7 @@ var paths = {
     css: "src/sass/**/*.scss",
     img: "src/img/**/*.*",
     js: "src/js/**/*.js",
+    svg: "src/svg",
     // fonts: "src/fonts/**/*.*",
   },
   clean: "./build",
@@ -163,6 +169,52 @@ gulp.task("js:build", function (done) {
   done();
 });
 
+// * Clone SVGs
+gulp.task("svg:clone", function () {
+  return gulp.src(paths.src.svg)
+    .pipe(gulp.dest(paths.build.svg));
+});
+
+// * Make SVGs
+gulp.task("svg:process", function () {
+  del.sync(paths.src.svgDist);
+
+  return gulp
+    .src(paths.src.svgSrc)
+    .pipe(
+      svgmin(function getOptions(file) {
+        var prefix = path.posix.basename(
+          file.relative,
+          path.extname(file.relative)
+        );
+        return {
+          plugins: [
+            //list of plugins https://github.com/svg/svgo/tree/master/plugins
+            //add unique id
+            {
+              cleanupIDs: {
+                prefix: prefix + "-",
+                minify: true,
+              },
+            },
+            {
+              removeViewBox: false,
+            },
+            // remove width and height
+            {
+              removeDimensions: true,
+            },
+          ],
+        };
+      })
+    )
+    .pipe(gulp.dest(paths.src.svgDist))
+    .pipe(svgstore())
+    .pipe(svg2string())
+    .pipe(rename(paths.src.jsSvg))
+    .pipe(gulp.dest("./"));
+});
+
 // * Build Task
 gulp.task(
   "build",
@@ -172,6 +224,8 @@ gulp.task(
     "image:build", // Process all images
     "css:build", // Process SASS+CSS
     "js:build",
+    "svg:clone",
+    // "svg:process",
     // "fonts:build",
   ])
 );
@@ -193,6 +247,7 @@ gulp.task("watch", function () {
         paths.watch.css,
         paths.watch.img,
         paths.watch.js,
+        paths.watch.svg
         // paths.watch.fonts,
       ],
       gulp.parallel([
@@ -201,6 +256,8 @@ gulp.task("watch", function () {
         "image:build",
         "css:build",
         "js:build",
+        "svg:clone",
+        // "svg:process",
         // "fonts:build",
       ])
     )
