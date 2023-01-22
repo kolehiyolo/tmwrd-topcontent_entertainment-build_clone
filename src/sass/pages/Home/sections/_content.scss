@@ -1,4 +1,5 @@
 .section-content {
+
     &,
     * {
         // border: dashed 1px red;
@@ -6,30 +7,82 @@
 
     // * All Sizes
     @media (min-width: 0px) {
+        & {}
 
+        .list {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .item {
+                display: flex;
+
+                &-movies {}
+
+                &-music {}
+
+                &-games {}
+
+                &-audiobooks {}
+
+                &-movies,
+                &-games {
+                    flex-direction: row;
+                }
+
+                &-music,
+                &-audiobooks {
+                    flex-direction: row-reverse;
+                }
+
+                .text,
+                .image {
+                    flex: 1 1 0px;
+                    width: 0;
+                }
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    h3 {}
+
+                    p {}
+                }
+
+                .image {
+                    // width: 500px;
+                    // width: 100vw;
+                    flex: 1 1 0px;
+                    width: 0;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 
     // * Mobile Sizes
-    @media (min-width: 0px) and (max-width: 640px) {
-
-    }
+    @media (min-width: 0px) and (max-width: 640px) {}
 
     // * Mid-tablet Size
-    @media (min-width: 641px) and (max-width: 1000px) {
-
-    }
+    @media (min-width: 641px) and (max-width: 1000px) {}
 
     // * Empty
     @media (min-width: 10000000px) {
-        & {
-
-        }
+        & {}
 
         .list {
             .item {
                 &-movies {}
+
                 &-music {}
+
                 &-games {}
+
                 &-audiobooks {}
 
                 &-movies,
@@ -40,6 +93,7 @@
 
                 .text {
                     h3 {}
+
                     p {}
                 }
 

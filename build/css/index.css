@@ -708,6 +708,48 @@ html body .main-home .section-about .body img {
     font-size: 18px;
   }
 }
+@media (min-width: 0px) {
+  html body .main-home .section-content .list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    gap: 50px;
+  }
+  html body .main-home .section-content .list .item {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  html body .main-home .section-content .list .item-movies, html body .main-home .section-content .list .item-games {
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+  html body .main-home .section-content .list .item-music, html body .main-home .section-content .list .item-audiobooks {
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+  }
+  html body .main-home .section-content .list .item .text,
+html body .main-home .section-content .list .item .image {
+    -ms-flex: 1 1 0px;
+        flex: 1 1 0px;
+    width: 0;
+  }
+  html body .main-home .section-content .list .item .text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    gap: 20px;
+  }
+  html body .main-home .section-content .list .item .image {
+    -ms-flex: 1 1 0px;
+        flex: 1 1 0px;
+    width: 0;
+  }
+  html body .main-home .section-content .list .item .image img {
+    width: 100%;
+  }
+}
 html body {
   display: -ms-flexbox;
   display: flex;
