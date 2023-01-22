@@ -4,16 +4,9 @@
   --color-text: #2f2c2c;
   --color-container-1: #f5f5f5;
   --color-white-1: #ffffff;
+  --color-white-2: #e6e6e6;
   --color-white-hover: #cccccc;
   --color-black-1: #333232;
-  --color-white: #ffffff;
-  --color-white-2: #f8f9f9;
-  --color-text: #494F7A;
-  --color-blue-1: #104EDC;
-  --color-blue-2: #7590cf;
-  --color-sea_green-1: #21d29c;
-  --color-translucent-blue: #0baeff23;
-  --gradient-blue: linear-gradient(70deg, #3378fe, #1e5ae5);
   --font-1: "Montserrat", sans-serif;
 }
 
@@ -236,7 +229,7 @@ html body .filter-show {
 @media (min-width: 0px) {
   html body .main-home .section-hero {
     min-height: 100vh;
-    padding-top: 50px;
+    padding: 50px 20px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -297,6 +290,7 @@ html body .filter-show {
     display: none;
   }
   html body .main-home .section-hero .intro .txt-compatibility .green_dot {
+    display: block;
     width: 12px;
     height: 12px;
     background-color: var(--color-primary);
@@ -337,6 +331,9 @@ html body .filter-show {
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
+  }
+  html body .main-home .section-hero .content_type .list .item p {
+    text-transform: uppercase;
   }
   html body .main-home .section-hero .steps .txt-instructions {
     display: none;
@@ -381,6 +378,102 @@ html body .filter-show {
   }
   html body .main-home .section-hero .steps .list .item .step_text {
     font-size: 20px;
+  }
+}
+@media (min-width: 0px) and (max-width: 640px) {
+  html body .main-home .section-hero {
+    background-image: none;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "steps" "intro" "content_type";
+  }
+  html body .main-home .section-hero .intro {
+    grid-area: intro;
+  }
+  html body .main-home .section-hero .intro .txt-title-1 {
+    display: none;
+  }
+  html body .main-home .section-hero .intro .txt-title-2 {
+    display: block;
+  }
+  html body .main-home .section-hero .intro .txt-subtitle {
+    font-size: 20px;
+    display: none;
+  }
+  html body .main-home .section-hero .intro .btn-continue {
+    padding: 10px 50px;
+  }
+  html body .main-home .section-hero .intro .txt-compatibility-1 {
+    display: none;
+  }
+  html body .main-home .section-hero .intro .txt-compatibility-2 {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  html body .main-home .section-hero .content_type {
+    grid-area: content_type;
+  }
+  html body .main-home .section-hero .content_type .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100vw;
+    gap: 0px;
+  }
+  html body .main-home .section-hero .content_type .list .item {
+    border: solid 1px var(--color-white-2);
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--color-container-1);
+  }
+  html body .main-home .section-hero .content_type .list .item i {
+    padding: 20px 0;
+  }
+  html body .main-home .section-hero .steps {
+    grid-area: steps;
+    padding-top: 50px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: stretch;
+        align-items: stretch;
+    gap: 40px;
+  }
+  html body .main-home .section-hero .steps .txt-instructions {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+  }
+  html body .main-home .section-hero .steps .list {
+    -ms-flex-pack: center;
+        justify-content: center;
+    gap: 10px;
+  }
+  html body .main-home .section-hero .steps .list .item {
+    width: 100%;
+  }
+  html body .main-home .section-hero .steps .list .item .step_number {
+    width: 30px;
+    height: 30px;
+  }
+  html body .main-home .section-hero .steps .list .item .step_number span {
+    font-size: 18px;
+  }
+  html body .main-home .section-hero .steps .list .item .step_text {
+    font-size: 14px;
+  }
+}
+@media (min-width: 641px) and (max-width: 992px) {
+  html body .main-home .section-hero .intro .txt-subtitle {
+    font-size: 20px;
+  }
+  html body .main-home .section-hero .steps .list {
+    gap: 20px;
+  }
+  html body .main-home .section-hero .steps .list .item {
+    width: 150px;
   }
 }
 html body {
