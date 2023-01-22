@@ -8,7 +8,59 @@
 
     // * All Sizes
     @media (min-width: 0px) {
+        & {
 
+        }
+
+        .text {
+            .head {
+                h2 {
+
+                }
+            }
+
+            .body {
+                p {
+
+                }
+
+                img {
+
+                }
+            }
+        }
+
+        .cards {
+            .list {
+                .item {
+                    &-secure {}
+                    &-premium {}
+                    &-all_device {}
+
+                    .head {
+                        i {
+
+                        }
+
+                        h3 {
+
+                        }
+                    }
+
+                    .body {
+                        p {
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .button {
+            .btn-continue {
+                
+            }
+        }
     }
 
     // * Mobile Sizes
@@ -23,6 +75,58 @@
 
     // * Empty
     @media (min-width: 10000000px) {
+        & {
 
+        }
+
+        .text {
+            .head {
+                h2 {
+
+                }
+            }
+
+            .body {
+                p {
+
+                }
+
+                img {
+
+                }
+            }
+        }
+
+        .cards {
+            .list {
+                .item {
+                    &-secure {}
+                    &-premium {}
+                    &-all_device {}
+
+                    .head {
+                        i {
+
+                        }
+
+                        h3 {
+
+                        }
+                    }
+
+                    .body {
+                        p {
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .button {
+            .btn-continue {
+
+            }
+        }
     }
 }
