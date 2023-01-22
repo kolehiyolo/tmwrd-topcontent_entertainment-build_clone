@@ -35,7 +35,59 @@
 
     // * Empty
     @media (min-width: 10000000px) {
+        & {}
 
+        .text {
+            .head {
+                p {
+                    span {
+
+                    }
+                }
+            }
+
+            .body {
+                ol {
+                    li {
+                        &.item-done {
+
+                        }
+
+                        &.item-not-done {
+
+                        }
+
+                        .number {
+                            span {}
+                        }
+
+                        .text {
+                            p {}
+                        }
+                    }
+                }
+            }
+        }
+
+        .form {
+            .label {
+                p {
+
+                }
+            }
+            form {
+                .input {
+                    &-email {}
+                    &-password {}
+                    .continue {
+
+                    }
+                }
+            }
+            .disclaimer {
+                p {}
+            }
+        }
     }
 }
 
@@ -49,7 +101,6 @@
     @media (min-width: 0px) {
         position: absolute;
         background-color: black;
-        // filter: blur(10px);
         top: 0;
         left: 0;
         width: 100vw;
