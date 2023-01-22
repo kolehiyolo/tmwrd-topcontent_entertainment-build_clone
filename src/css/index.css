@@ -748,6 +748,48 @@ html body .main-home .section-join_us .content .img {
     width: 100%;
   }
 }
+@media (min-width: 0px) {
+  html body .main-home .section-content_cards {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px 50px 50px 50px;
+  }
+  html body .main-home .section-content_cards .list {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  html body .main-home .section-content_cards .list .item {
+    flex: 1 1 0;
+    width: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    background-color: var(--color-container-1);
+    box-shadow: 0 5px 5px var(--color-black-1);
+  }
+  html body .main-home .section-content_cards .list .item .img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  html body .main-home .section-content_cards .list .item .img i {
+    font-size: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+  }
+  html body .main-home .section-content_cards .list .item .text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 html body {
   display: flex;
   flex-direction: column;
