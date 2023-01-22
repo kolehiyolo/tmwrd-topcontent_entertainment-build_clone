@@ -12,6 +12,9 @@
   --font-1: "Montserrat", sans-serif;
 }
 
+html body, html body * {
+  border: dashed 1px red;
+}
 html body {
   width: 100vw;
   min-height: 100vh;
@@ -829,6 +832,26 @@ html body .main-home .section-bundle_banner .body {
   }
   html body .main-home .section-bundle_banner .body .list {
     padding: 0 0 0 30px;
+  }
+}
+@media (min-width: 0px) and (max-width: 640px) {
+  html body .main-home .section-bundle_banner {
+    flex-direction: column;
+  }
+  html body .main-home .section-bundle_banner .head,
+html body .main-home .section-bundle_banner .body {
+    width: 100%;
+    padding: 20px;
+  }
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  html body .main-home .section-bundle_banner {
+    flex-direction: column;
+  }
+  html body .main-home .section-bundle_banner .head,
+html body .main-home .section-bundle_banner .body {
+    width: 100%;
+    padding: 20px;
   }
 }
 html body {

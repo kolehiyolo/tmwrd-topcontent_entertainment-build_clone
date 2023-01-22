@@ -52,12 +52,74 @@
 
     // * Mobile Sizes
     @media (min-width: 0px) and (max-width: 640px) {
+        & {
+            flex-direction: column;
+        }
 
+        .head,
+        .body {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .head {
+            h2 {
+
+            }
+        }
+
+        .body {
+            .list {
+                .item {
+                    &-1 {}
+                    &-2 {}
+                    &-3 {}
+                    &-4 {}
+                    &-5 {}
+                    &-6 {}
+
+                    p {
+
+                    }
+                }
+            }
+        }
     }
 
     // * Mid-tablet Size
-    @media (min-width: 641px) and (max-width: 1000px) {
+    @media (min-width: 641px) and (max-width: 1200px) {
+        & {
+            flex-direction: column;
+        }
 
+        .head,
+        .body {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .head {
+            h2 {
+
+            }
+        }
+
+        .body {
+            .list {
+                .item {
+                    &-1 {}
+                    &-2 {}
+                    &-3 {}
+                    &-4 {}
+                    &-5 {}
+                    &-6 {}
+
+                    p {
+
+                    }
+                }
+            }
+        }
     }
 
     // * Empty
