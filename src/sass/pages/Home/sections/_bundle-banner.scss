@@ -6,7 +6,48 @@
 
     // * All Sizes
     @media (min-width: 0px) {
+        & {
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+            padding: 20px;
+            background-image: var(--gradient-sky);
+        }
 
+        .head,
+        .body {
+            flex: 1 1 0;
+            width: 0;
+        }
+
+        .head {
+            padding: 20px 20px 20px 50px;
+
+            h2 {
+
+            }
+        }
+
+        .body {
+            padding: 20px 50px 20px 20px;
+
+            .list {
+                padding: 0 0 0 30px;
+
+                .item {
+                    &-1 {}
+                    &-2 {}
+                    &-3 {}
+                    &-4 {}
+                    &-5 {}
+                    &-6 {}
+
+                    p {
+                        
+                    }
+                }
+            }
+        }
     }
 
     // * Mobile Sizes
@@ -40,7 +81,7 @@
                     &-6 {}
 
                     p {
-                        
+
                     }
                 }
             }

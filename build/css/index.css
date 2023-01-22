@@ -956,6 +956,32 @@ html body .main-home .section-join_us .content .img {
     width: 100%;
   }
 }
+@media (min-width: 0px) {
+  html body .main-home .section-bundle_banner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    width: 100vw;
+    padding: 20px;
+    background-image: var(--gradient-sky);
+  }
+  html body .main-home .section-bundle_banner .head,
+html body .main-home .section-bundle_banner .body {
+    -ms-flex: 1 1 0px;
+        flex: 1 1 0;
+    width: 0;
+  }
+  html body .main-home .section-bundle_banner .head {
+    padding: 20px 20px 20px 50px;
+  }
+  html body .main-home .section-bundle_banner .body {
+    padding: 20px 50px 20px 20px;
+  }
+  html body .main-home .section-bundle_banner .body .list {
+    padding: 0 0 0 30px;
+  }
+}
 html body {
   display: -ms-flexbox;
   display: flex;
