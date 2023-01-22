@@ -1,4 +1,5 @@
 .section-about {
+
     &,
     * {
         // border: dashed 1px red;
@@ -7,119 +8,37 @@
     // * All Sizes
     @media (min-width: 0px) {
         & {
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-            justify-content: center;
             width: 1000px;
             margin: 0 auto;
             padding: 50px 50px;
-        }
 
-        .text {
             display: flex;
             flex-direction: column;
             gap: 50px;
             justify-content: center;
+        }
 
-            .head {
-                h2 {
-                    text-align: center;
-                }
-            }
-
-            .body {
-                display: flex;
-                flex-direction: row;
-                gap: 20px;
-                justify-content: center;
-                align-items: center;
-
-                p {
-                    flex: 1 1 0;
-                    width: 0;
-                }
-
-                img {
-                    flex: 1 1 0;
-                    width: 0;
-                }
+        .head {
+            h2 {
+                text-align: center;
             }
         }
 
-        .cards {
-            .list {
-                display: flex;
-                flex-direction: row;
-                gap: 20px;
-                justify-content: center;
-
-                .item {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 20px;
-                    justify-content: flex-start;
-                    padding: 20px;
-                    flex: 1 1 0px;
-                    width: 0;
-                    background-color: var(--color-container-1);
-                    box-shadow: 0 5px 5px var(--color-black-1);
-
-                    &-secure {}
-
-                    &-premium {}
-
-                    &-all_device {}
-
-                    .head {
-                        display: flex;
-                        flex-direction: row;
-                        gap: 20px;
-                        justify-content: flex-start;
-                        align-items: center;
-
-                        i {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-                            font-size: 40px;
-                            color: var(--color-stroke);
-                        }
-
-                        h3 {
-                            font-size: 20px;
-                            font-weight: bold;
-                        }
-                    }
-
-                    .body {
-                        p {}
-                    }
-                }
-            }
-        }
-
-        .button {
+        .body {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            gap: 20px;
             justify-content: center;
             align-items: center;
 
-            .btn-continue {
-                background-color: var(--color-primary);
-                text-transform: uppercase;
-                font-size: 35px;
-                font-family: var(--font-1);
-                font-weight: bold;
-                color: var(--color-white-1);
-                border: none;
-                padding: 20px 90px;
-                transition: 0.5s all;
+            p {
+                flex: 1 1 0;
+                width: 0;
+            }
 
-                &:hover {
-                    background-color: var(--color-primary-lighter);
-                }
+            img {
+                flex: 1 1 0;
+                width: 0;
             }
         }
     }
@@ -129,72 +48,26 @@
         & {
             width: 100%;
             padding: 20px;
+            gap: 30px;
         }
 
-        .text {
+        .head {
+            h2 {}
+        }
+
+        .body {
+            flex-direction: column;
+            align-items: stretch;
             gap: 30px;
 
-            .head {
-                h2 {}
+            p,
+            img {
+                width: 100%;
             }
 
-            .body {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 30px;
+            p {}
 
-                p, img {
-                    width: 100%;
-                }
-
-                p {
-                    
-                }
-
-                img {}
-            }
-        }
-
-        .cards {
-            .list {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 30px;
-
-                .item {
-                    padding: 20px 15px;
-                    gap: 15px;
-                    width: 100%;
-
-                    &-secure {}
-
-                    &-premium {}
-
-                    &-all_device {}
-
-                    .head {
-                        gap: 10px;
-
-                        i {
-                            font-size: 25px;
-                        }
-
-                        h3 {
-                            font-size: 18px;
-                        }
-                    }
-
-                    .body {
-                        p {}
-                    }
-                }
-            }
-        }
-
-        .button {
-            .btn-continue {
-                padding: 10px 50px;
-            }
+            img {}
         }
     }
 
@@ -204,51 +77,14 @@
             width: 100%;
         }
 
-        .text {
-            .head {
-                h2 {}
-            }
-
-            .body {
-                p {}
-
-                img {}
-            }
+        .head {
+            h2 {}
         }
 
-        .cards {
-            .list {
-                .item {
-                    padding: 20px 15px;
-                    gap: 15px;
+        .body {
+            p {}
 
-                    &-secure {}
-
-                    &-premium {}
-
-                    &-all_device {}
-
-                    .head {
-                        gap: 10px;
-
-                        i {
-                            font-size: 25px;
-                        }
-
-                        h3 {
-                            font-size: 18px;
-                        }
-                    }
-
-                    .body {
-                        p {}
-                    }
-                }
-            }
-        }
-
-        .button {
-            .btn-continue {}
+            img {}
         }
     }
 
@@ -256,42 +92,14 @@
     @media (min-width: 10000000px) {
         & {}
 
-        .text {
-            .head {
-                h2 {}
-            }
-
-            .body {
-                p {}
-
-                img {}
-            }
+        .head {
+            h2 {}
         }
 
-        .cards {
-            .list {
-                .item {
-                    &-secure {}
+        .body {
+            p {}
 
-                    &-premium {}
-
-                    &-all_device {}
-
-                    .head {
-                        i {}
-
-                        h3 {}
-                    }
-
-                    .body {
-                        p {}
-                    }
-                }
-            }
-        }
-
-        .button {
-            .btn-continue {}
+            img {}
         }
     }
 }

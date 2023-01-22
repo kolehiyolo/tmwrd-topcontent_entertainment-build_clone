@@ -509,6 +509,67 @@ html body .filter-show {
 }
 @media (min-width: 0px) {
   html body .main-home .section-about {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 50px 50px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    gap: 50px;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  html body .main-home .section-about .head h2 {
+    text-align: center;
+  }
+  html body .main-home .section-about .body {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    gap: 20px;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  html body .main-home .section-about .body p {
+    -ms-flex: 1 1 0px;
+        flex: 1 1 0;
+    width: 0;
+  }
+  html body .main-home .section-about .body img {
+    -ms-flex: 1 1 0px;
+        flex: 1 1 0;
+    width: 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 640px) {
+  html body .main-home .section-about {
+    width: 100%;
+    padding: 20px;
+    gap: 30px;
+  }
+  html body .main-home .section-about .body {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: stretch;
+        align-items: stretch;
+    gap: 30px;
+  }
+  html body .main-home .section-about .body p,
+html body .main-home .section-about .body img {
+    width: 100%;
+  }
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+  html body .main-home .section-about {
+    width: 100%;
+  }
+}
+@media (min-width: 0px) {
+  html body .main-home .section-features {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -520,40 +581,7 @@ html body .filter-show {
     margin: 0 auto;
     padding: 50px 50px;
   }
-  html body .main-home .section-about .text {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    gap: 50px;
-    -ms-flex-pack: center;
-        justify-content: center;
-  }
-  html body .main-home .section-about .text .head h2 {
-    text-align: center;
-  }
-  html body .main-home .section-about .text .body {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    gap: 20px;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-align: center;
-        align-items: center;
-  }
-  html body .main-home .section-about .text .body p {
-    -ms-flex: 1 1 0px;
-        flex: 1 1 0;
-    width: 0;
-  }
-  html body .main-home .section-about .text .body img {
-    -ms-flex: 1 1 0px;
-        flex: 1 1 0;
-    width: 0;
-  }
-  html body .main-home .section-about .cards .list {
+  html body .main-home .section-features .cards .list {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
@@ -562,7 +590,7 @@ html body .filter-show {
     -ms-flex-pack: center;
         justify-content: center;
   }
-  html body .main-home .section-about .cards .list .item {
+  html body .main-home .section-features .cards .list .item {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -577,7 +605,7 @@ html body .filter-show {
     background-color: var(--color-container-1);
     box-shadow: 0 5px 5px var(--color-black-1);
   }
-  html body .main-home .section-about .cards .list .item .head {
+  html body .main-home .section-features .cards .list .item .head {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
@@ -588,7 +616,7 @@ html body .filter-show {
     -ms-flex-align: center;
         align-items: center;
   }
-  html body .main-home .section-about .cards .list .item .head i {
+  html body .main-home .section-features .cards .list .item .head i {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -600,11 +628,11 @@ html body .filter-show {
     font-size: 40px;
     color: var(--color-stroke);
   }
-  html body .main-home .section-about .cards .list .item .head h3 {
+  html body .main-home .section-features .cards .list .item .head h3 {
     font-size: 20px;
     font-weight: bold;
   }
-  html body .main-home .section-about .button {
+  html body .main-home .section-features .button {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -614,7 +642,7 @@ html body .filter-show {
     -ms-flex-align: center;
         align-items: center;
   }
-  html body .main-home .section-about .button .btn-continue {
+  html body .main-home .section-features .button .btn-continue {
     background-color: var(--color-primary);
     text-transform: uppercase;
     font-size: 35px;
@@ -625,68 +653,55 @@ html body .filter-show {
     padding: 20px 90px;
     transition: 0.5s all;
   }
-  html body .main-home .section-about .button .btn-continue:hover {
+  html body .main-home .section-features .button .btn-continue:hover {
     background-color: var(--color-primary-lighter);
   }
 }
 @media (min-width: 0px) and (max-width: 640px) {
-  html body .main-home .section-about {
+  html body .main-home .section-features {
     width: 100%;
     padding: 20px;
   }
-  html body .main-home .section-about .text {
-    gap: 30px;
-  }
-  html body .main-home .section-about .text .body {
+  html body .main-home .section-features .cards .list {
     -ms-flex-direction: column;
         flex-direction: column;
     -ms-flex-align: stretch;
         align-items: stretch;
     gap: 30px;
   }
-  html body .main-home .section-about .text .body p, html body .main-home .section-about .text .body img {
-    width: 100%;
-  }
-  html body .main-home .section-about .cards .list {
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-align: stretch;
-        align-items: stretch;
-    gap: 30px;
-  }
-  html body .main-home .section-about .cards .list .item {
+  html body .main-home .section-features .cards .list .item {
     padding: 20px 15px;
     gap: 15px;
     width: 100%;
   }
-  html body .main-home .section-about .cards .list .item .head {
+  html body .main-home .section-features .cards .list .item .head {
     gap: 10px;
   }
-  html body .main-home .section-about .cards .list .item .head i {
+  html body .main-home .section-features .cards .list .item .head i {
     font-size: 25px;
   }
-  html body .main-home .section-about .cards .list .item .head h3 {
+  html body .main-home .section-features .cards .list .item .head h3 {
     font-size: 18px;
   }
-  html body .main-home .section-about .button .btn-continue {
+  html body .main-home .section-features .button .btn-continue {
     padding: 10px 50px;
   }
 }
 @media (min-width: 641px) and (max-width: 1000px) {
-  html body .main-home .section-about {
+  html body .main-home .section-features {
     width: 100%;
   }
-  html body .main-home .section-about .cards .list .item {
+  html body .main-home .section-features .cards .list .item {
     padding: 20px 15px;
     gap: 15px;
   }
-  html body .main-home .section-about .cards .list .item .head {
+  html body .main-home .section-features .cards .list .item .head {
     gap: 10px;
   }
-  html body .main-home .section-about .cards .list .item .head i {
+  html body .main-home .section-features .cards .list .item .head i {
     font-size: 25px;
   }
-  html body .main-home .section-about .cards .list .item .head h3 {
+  html body .main-home .section-features .cards .list .item .head h3 {
     font-size: 18px;
   }
 }
