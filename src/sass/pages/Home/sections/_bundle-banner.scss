@@ -1,0 +1,49 @@
+.section-bundle_banner {
+    &,
+    * {
+        // border: dashed 1px red;
+    }
+
+    // * All Sizes
+    @media (min-width: 0px) {
+
+    }
+
+    // * Mobile Sizes
+    @media (min-width: 0px) and (max-width: 640px) {
+
+    }
+
+    // * Mid-tablet Size
+    @media (min-width: 641px) and (max-width: 1000px) {
+
+    }
+
+    // * Empty
+    @media (min-width: 10000000px) {
+        & {}
+
+        .head {
+            h2 {
+
+            }
+        }
+
+        .body {
+            .list {
+                .item {
+                    &-1 {}
+                    &-2 {}
+                    &-3 {}
+                    &-4 {}
+                    &-5 {}
+                    &-6 {}
+
+                    p {
+                        
+                    }
+                }
+            }
+        }
+    }
+}
