@@ -836,16 +836,16 @@ html body .main-home .section-about .body img {
     display: flex;
     background-image: var(--gradient-sky);
   }
-  html body .main-home .section-content .list .item-unrestricted, html body .main-home .section-content .list .item-anonymous {
+  html body .main-home .section-content .list .item-entertainment, html body .main-home .section-content .list .item-anonymous {
     flex-direction: row;
   }
-  html body .main-home .section-content .list .item-unrestricted .image, html body .main-home .section-content .list .item-anonymous .image {
+  html body .main-home .section-content .list .item-entertainment .image, html body .main-home .section-content .list .item-anonymous .image {
     justify-content: flex-start;
   }
-  html body .main-home .section-content .list .item-privacy, html body .main-home .section-content .list .item-fast {
+  html body .main-home .section-content .list .item-security, html body .main-home .section-content .list .item-fast {
     flex-direction: row-reverse;
   }
-  html body .main-home .section-content .list .item-privacy .image, html body .main-home .section-content .list .item-fast .image {
+  html body .main-home .section-content .list .item-security .image, html body .main-home .section-content .list .item-fast .image {
     justify-content: flex-end;
   }
   html body .main-home .section-content .list .item .text,
@@ -868,7 +868,7 @@ html body .main-home .section-content .list .item .image {
     padding: 20px;
   }
   html body .main-home .section-content .list .item .image img {
-    width: 500px;
+    border-radius: 20px;
   }
 }
 @media (min-width: 0px) and (max-width: 640px) {

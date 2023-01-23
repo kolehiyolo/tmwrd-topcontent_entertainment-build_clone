@@ -28,7 +28,7 @@
 
                 &-audiobooks {}
 
-                &-unrestricted,
+                &-entertainment,
                 &-anonymous {
                     flex-direction: row;
 
@@ -37,7 +37,7 @@
                     }
                 }
 
-                &-privacy,
+                &-security,
                 &-fast {
                     flex-direction: row-reverse;
 
@@ -72,9 +72,11 @@
                     flex-direction: row;
                     align-self: center;
                     padding: 20px;
+                    
 
                     img {
-                        width: 500px;
+                        border-radius: 20px;
+                        // width: 500px;
                     }
                 }
             }
