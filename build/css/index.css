@@ -408,6 +408,9 @@ html body .popup-register .form {
     font-size: 0.75rem;
     color: var(--color-white-hover);
   }
+  html body .popup-register .form .disclaimer p span {
+    display: block;
+  }
 }
 @media (min-width: 0px) and (max-width: 640px) {
   html body .popup-register {
