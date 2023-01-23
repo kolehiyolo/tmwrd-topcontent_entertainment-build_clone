@@ -19,11 +19,10 @@
 <!-- Fix text changes -->
 <!-- Fix legibility issues -->
 <!-- No torrent/p2p text or images -->
-Add a footer similar to https://hotbotvpn.com/apps
+<!-- Add a footer similar to https://hotbotvpn.com/apps -->
 
 <!-- ! Will have to learn -->
-Fix Google Fonts
+<!-- Fix Google Fonts -->
 Fix SVG Gulp
-
 
 <!-- TODO Unsorted-->

@@ -1,3 +1,9 @@
+// * Google Fonts
+// -* Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+// -* Noto Sans
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 // * Abstracts
 @import "abstracts/variables";
 // @import "abstracts/typography";
@@ -5,8 +11,10 @@
 // * Testing
 html {
     body {
+
         // -* Adding borders to all components for easier box-styling
-        &, * {
+        &,
+        * {
             // border: dashed 1px red;
         }
 
@@ -30,6 +38,7 @@ html {
     font-family: var(--font-2);
 
     body {
+
         // -* Removing default margin+padding and establishing border-box box-sizing for easier box-styling
         &,
         * {
@@ -58,6 +67,7 @@ html {
 html {
     body {
         @import "partials/macro/Header";
+        @import "partials/macro/Footer";
         // @import "partials/Footer";
     }
 }
@@ -75,7 +85,7 @@ html {
     body {
         &.disable-scroll {
             overflow-y: hidden;
-        }        
+        }
 
         // Need this so that filter will cover the entire page
         position: relative;
