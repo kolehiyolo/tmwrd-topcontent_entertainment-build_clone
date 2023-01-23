@@ -15,6 +15,7 @@
 
 html {
   scroll-behavior: auto !important;
+  font-size: 16px;
 }
 html body {
   width: 100vw;
@@ -92,7 +93,7 @@ html body .txt-bold {
     text-transform: uppercase;
     border: none;
     background-color: transparent;
-    font-size: 11px;
+    font-size: 0.7rem;
   }
   html body .header .container .menu .list li button:hover {
     color: var(--color-white-hover);
@@ -262,10 +263,10 @@ html body .popup-register .form {
   }
   html body .popup-register .instructions .head p {
     text-align: center;
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   html body .popup-register .instructions .head p span {
-    font-size: 22px;
+    font-size: 1.375rem;
     display: block;
   }
   html body .popup-register .instructions .body ol {
@@ -298,7 +299,7 @@ html body .popup-register .form {
     color: var(--color-white-1);
   }
   html body .popup-register .instructions .body ol li .text p {
-    font-size: 16px;
+    font-size: 1rem;
   }
   html body .popup-register .form {
     display: flex;
@@ -313,7 +314,7 @@ html body .popup-register .form {
   html body .popup-register .form .label {
     text-align: center;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   html body .popup-register .form form {
     display: flex;
@@ -329,7 +330,7 @@ html body .popup-register .form {
   html body .popup-register .form form .btn-continue {
     background-color: var(--color-primary);
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: var(--font-1);
     font-weight: bold;
     color: var(--color-white-1);
@@ -345,7 +346,7 @@ html body .popup-register .form {
     text-align: center;
   }
   html body .popup-register .form .disclaimer p {
-    font-size: 12px;
+    font-size: 0.75rem;
     color: var(--color-white-hover);
   }
 }
@@ -460,12 +461,12 @@ html body .filter-show {
     display: none;
   }
   html body .main-home .section-hero .intro .txt-subtitle {
-    font-size: 22px;
+    font-size: 1.4rem;
   }
   html body .main-home .section-hero .intro .btn-continue {
     background-color: var(--color-primary);
     text-transform: uppercase;
-    font-size: 35px;
+    font-size: 2.2rem;
     font-family: var(--font-1);
     font-weight: bold;
     color: var(--color-white-1);
@@ -485,7 +486,7 @@ html body .filter-show {
     justify-content: center;
     align-items: center;
     gap: 7px;
-    font-size: 18px;
+    font-size: 1.2rem;
   }
   html body .main-home .section-hero .intro .txt-compatibility-2 {
     display: none;
@@ -548,11 +549,11 @@ html body .filter-show {
     align-items: center;
   }
   html body .main-home .section-hero .steps .list .item .step_number span {
-    font-size: 28px;
+    font-size: 1.7rem;
     color: var(--color-white-1);
   }
   html body .main-home .section-hero .steps .list .item .step_text {
-    font-size: 20px;
+    font-size: 1.3rem;
     text-align: center;
   }
 }
@@ -576,7 +577,7 @@ html body .filter-show {
     display: block;
   }
   html body .main-home .section-hero .intro .txt-subtitle {
-    font-size: 20px;
+    font-size: 1.3px;
     display: none;
   }
   html body .main-home .section-hero .intro .btn-continue {
@@ -620,7 +621,7 @@ html body .filter-show {
   html body .main-home .section-hero .steps .txt-instructions {
     display: block;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.3rem;
   }
   html body .main-home .section-hero .steps .list {
     justify-content: center;
@@ -636,15 +637,15 @@ html body .filter-show {
     background-color: #b6b6b6;
   }
   html body .main-home .section-hero .steps .list .item .step_number span {
-    font-size: 18px;
+    font-size: 1.1rem;
   }
   html body .main-home .section-hero .steps .list .item .step_text {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 @media (min-width: 641px) and (max-width: 992px) {
   html body .main-home .section-hero .intro .txt-subtitle {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   html body .main-home .section-hero .steps .list {
     gap: 20px;
@@ -746,15 +747,15 @@ html body .main-home .section-about .body img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 2.5rem;
     color: var(--color-stroke);
   }
   html body .main-home .section-features .cards .list .item .head h3 {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
   }
   html body .main-home .section-features .cards .list .item .body p {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   html body .main-home .section-features .button {
     display: flex;
@@ -765,7 +766,7 @@ html body .main-home .section-about .body img {
   html body .main-home .section-features .button .btn-continue {
     background-color: var(--color-primary);
     text-transform: uppercase;
-    font-size: 35px;
+    font-size: 2.1rem;
     font-family: var(--font-1);
     font-weight: bold;
     color: var(--color-white-1);
@@ -796,10 +797,10 @@ html body .main-home .section-about .body img {
     gap: 10px;
   }
   html body .main-home .section-features .cards .list .item .head i {
-    font-size: 25px;
+    font-size: 1.55rem;
   }
   html body .main-home .section-features .cards .list .item .head h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   html body .main-home .section-features .button .btn-continue {
     padding: 10px 50px;
@@ -817,10 +818,10 @@ html body .main-home .section-about .body img {
     gap: 10px;
   }
   html body .main-home .section-features .cards .list .item .head i {
-    font-size: 25px;
+    font-size: 1.55rem;
   }
   html body .main-home .section-features .cards .list .item .head h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 @media (min-width: 0px) {
@@ -831,6 +832,7 @@ html body .main-home .section-about .body img {
     display: flex;
     flex-direction: column;
     gap: 50px;
+    overflow-x: hidden;
   }
   html body .main-home .section-content .list .item {
     display: flex;
@@ -936,7 +938,7 @@ html body .main-home .section-join_us .content .img {
   html body .main-home .section-join_us .button .btn-continue {
     background-color: var(--color-primary);
     text-transform: uppercase;
-    font-size: 35px;
+    font-size: 2.2rem;
     font-family: var(--font-1);
     font-weight: bold;
     color: var(--color-white-1);
@@ -1005,7 +1007,7 @@ html body .main-home .section-join_us .content .img {
     justify-content: center;
   }
   html body .main-home .section-content_cards .list .item .img i {
-    font-size: 120px;
+    font-size: 7.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1019,10 +1021,10 @@ html body .main-home .section-join_us .content .img {
     text-align: center;
   }
   html body .main-home .section-content_cards .list .item .text h3 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   html body .main-home .section-content_cards .list .item .text p {
-    font-size: 13px;
+    font-size: 0.82rem;
   }
 }
 @media (min-width: 0px) and (max-width: 990px) {
@@ -1071,7 +1073,7 @@ html body .main-home .section-bundle_banner .body {
   html body .main-home .section-bundle_banner .body .btn-continue {
     background-color: var(--color-primary);
     text-transform: uppercase;
-    font-size: 35px;
+    font-size: 2.1875rem;
     font-family: var(--font-1);
     font-weight: bold;
     color: var(--color-white-1);
@@ -1116,7 +1118,7 @@ html body .main-home .section-bundle_banner .body {
     margin: 0 auto;
   }
   html body .main-home .section-terms .text p {
-    font-size: 11px;
+    font-size: 0.68rem;
   }
 }
 @media (min-width: 0px) and (max-width: 640px) {
