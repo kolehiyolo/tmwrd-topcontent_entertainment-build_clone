@@ -162,8 +162,8 @@ html body .txt-bold {
     border: none;
   }
   html body .header .container .menu_toggle .hamburger {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -172,11 +172,11 @@ html body .txt-bold {
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    gap: 6px;
+    gap: 7px;
   }
   html body .header .container .menu_toggle .hamburger .line {
-    width: 30px;
-    height: 6px;
+    width: 26px;
+    height: 4px;
     background-color: var(--color-text);
     position: relative;
     top: 0;
@@ -413,9 +413,10 @@ html body .popup-register .form {
   html body .popup-register {
     width: calc(100% - 40px);
     margin: 20px;
+    top: 20px;
     left: 0;
-    -webkit-transform: translate(0%, -50%);
-            transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
     -ms-flex-direction: column;
         flex-direction: column;
   }
@@ -435,9 +436,10 @@ html body .popup-register .form {
   html body .popup-register {
     width: calc(100% - 40px);
     margin: 20px;
+    top: 20px;
     left: 0;
-    -webkit-transform: translate(0%, -50%);
-            transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
   }
 }
 @media (min-width: 0px) {
@@ -526,6 +528,7 @@ html body .filter-show {
   html body .main-home .section-hero .intro .txt-title {
     font-family: var(--font-1);
     font-size: 2.5rem;
+    text-align: center;
   }
   html body .main-home .section-hero .intro .txt-title-2 {
     display: none;
@@ -661,6 +664,9 @@ html body .filter-show {
   html body .main-home .section-hero .intro {
     grid-area: intro;
     padding: 0px 20px 0px 20px;
+  }
+  html body .main-home .section-hero .intro .txt-title {
+    font-size: 1.8rem;
   }
   html body .main-home .section-hero .intro .txt-title-1 {
     display: none;

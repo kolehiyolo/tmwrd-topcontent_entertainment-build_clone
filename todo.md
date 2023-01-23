@@ -6,12 +6,12 @@ Fix Vertical Align in Content
 <!-- * Very Doable -->
 <!-- Fix links are not crawlable -->
 <!-- Fix srcset -->
-Fix input validation
-Fix hamburger menu
+<!-- Fix input validation -->
+<!-- Fix hamburger menu -->
 
 <!-- ? I have an idea but not sure -->
+<!-- Fix popup on mobile -->
 Fix text changes
-Fix popup on mobile
 Fix legibility issues
 
 <!-- ! Will have to learn -->

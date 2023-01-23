@@ -1,5 +1,4 @@
 .popup-register {
-
     &,
     * {
         // border: dashed 1px red;
@@ -175,8 +174,9 @@
         & {
             width: calc(100% - 40px);
             margin: 20px;
+            top: 20px;
             left: 0;
-            transform: translate(0%, -50%);
+            transform: translate(0%, 0%);
             flex-direction: column;
         }
 
@@ -240,8 +240,9 @@
         & {
             width: calc(100% - 40px);
             margin: 20px;
+            top: 20px;
             left: 0;
-            transform: translate(0%, -50%);
+            transform: translate(0%, 0%);
         }
     }
 

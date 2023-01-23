@@ -149,17 +149,17 @@
 
                 .hamburger {
                     // border: dashed 1px red;
-                    width: 30px;
-                    height: 30px;
+                    width: 26px;
+                    height: 26px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    gap: 6px;
+                    gap: 7px;
                     
                     .line {
-                        width: 30px;
-                        height: 6px;
+                        width: 26px;
+                        height: 4px;
                         background-color: var(--color-text);
                         // border-radius: 5px;
                         position: relative;
