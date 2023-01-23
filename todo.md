@@ -4,10 +4,10 @@ Fix Bootstrap
 Fix Vertical Align in Content
 
 <!-- * Very Doable -->
-Fix links are not crawlable
+<!-- Fix links are not crawlable -->
+<!-- Fix srcset -->
 Fix input validation
 Fix hamburger menu
-Fix srcset
 
 <!-- ? I have an idea but not sure -->
 Fix text changes
