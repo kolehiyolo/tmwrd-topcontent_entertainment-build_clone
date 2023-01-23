@@ -55,7 +55,7 @@ html body .txt-bold {
   }
   html body .header .container .logo img {
     display: block;
-    width: 100%;
+    width: 145px;
   }
   html body .header .container .logo p {
     font-family: var(--font-1);
@@ -176,7 +176,7 @@ html body .txt-bold {
     padding: 10px 20px !important;
   }
   html body .header .container .logo img {
-    width: 100%;
+    width: 145px;
   }
 }
 @media (max-width: 992px) {
@@ -633,6 +633,7 @@ html body .filter-show {
   html body .main-home .section-hero .steps .list .item .step_number {
     width: 30px;
     height: 30px;
+    background-color: #b6b6b6;
   }
   html body .main-home .section-hero .steps .list .item .step_number span {
     font-size: 18px;
