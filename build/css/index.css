@@ -11,11 +11,13 @@
   --color-stroke: #b0b7ca;
   --gradient-sky: linear-gradient(0deg, #b7e4f9, #e1f3fd);
   --font-1: "Montserrat", sans-serif;
+  --font-2: "Noto Sans", sans-serif;
 }
 
 html {
   scroll-behavior: auto !important;
   font-size: 16px;
+  font-family: var(--font-2);
 }
 html body {
   width: 100vw;
@@ -40,6 +42,9 @@ html body .txt-bold {
     width: 100vw;
     z-index: 100;
   }
+  html body .header * {
+    font-family: var(--font-2);
+  }
   html body .header .container {
     display: -ms-flexbox;
     display: flex;
@@ -49,6 +54,7 @@ html body .txt-bold {
         justify-content: space-between;
     padding: 10px 0px;
     max-width: 970px;
+    margin: 0 auto;
   }
   html body .header .container .logo {
     display: -ms-flexbox;
@@ -519,6 +525,7 @@ html body .filter-show {
   }
   html body .main-home .section-hero .intro .txt-title {
     font-family: var(--font-1);
+    font-size: 2.5rem;
   }
   html body .main-home .section-hero .intro .txt-title-2 {
     display: none;
@@ -859,17 +866,8 @@ html body .main-home .section-about .body img {
     -ms-flex-align: center;
         align-items: center;
   }
-  html body .main-home .section-features .cards .list .item .head i {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-align: center;
-        align-items: center;
-    font-size: 2.5rem;
-    color: var(--color-stroke);
+  html body .main-home .section-features .cards .list .item .head img {
+    width: 40px;
   }
   html body .main-home .section-features .cards .list .item .head h3 {
     font-size: 1.25rem;
@@ -995,6 +993,8 @@ html body .main-home .section-content .list .item .image {
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
     gap: 20px;
     padding: 50px;
   }
@@ -1178,17 +1178,8 @@ html body .main-home .section-join_us .content .img {
     -ms-flex-pack: center;
         justify-content: center;
   }
-  html body .main-home .section-content_cards .list .item .img i {
-    font-size: 7.5rem;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-pack: center;
-        justify-content: center;
-    color: #ccf1fc;
+  html body .main-home .section-content_cards .list .item .img img {
+    width: 120px;
   }
   html body .main-home .section-content_cards .list .item .text {
     display: -ms-flexbox;

@@ -13,6 +13,10 @@
             width: 100vw;
             z-index: 100;
         }
+
+        * {
+            font-family: var(--font-2);
+        }
         
         .container {
             display: flex;
@@ -20,6 +24,7 @@
             justify-content: space-between;
             padding: 10px 0px;
             max-width: 970px;
+            margin: 0 auto;
 
             .logo {
                 display: flex;
