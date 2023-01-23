@@ -1,27 +1,26 @@
-$(`.header .container .menu_toggle`).click(function(){
-    if($(`.header .container .menu`).hasClass(`hidden`)) {
-        $(`.header .container .menu`).removeClass(`hidden`);
-        $(`.header .container .menu`).addClass(`show`);
-        $(`body`).addClass(`disable-scroll`);
+document.querySelector(`.header > .container > .menu_toggle`).addEventListener("click", function () {
+    toggleHeaderMenu();
+});
 
-        $(`.filter`).removeClass(`filter-hidden`);
-        $(`.filter`).addClass(`filter-fade_in`);
-        $(`.filter`).addClass(`filter-show`);
-        setTimeout(()=>{
-            $(`.filter`).removeClass(`filter-fade_in`);
+function toggleHeaderMenu() {
+    if (document.querySelector(`.header > .container > .menu`).classList.contains(`hidden`)) {
+        document.querySelector(`.filter`).classList.remove(`filter-hidden`);
+        document.querySelector(`.filter`).classList.add(`filter-fade_in`);
+        document.querySelector(`.filter`).classList.add(`filter-show`);
+        setTimeout(() => {
+            document.querySelector(`.filter`).classList.remove(`filter-fade_in`);
         }, 350);
     } else {
-        $(`.header .container .menu`).removeClass(`show`);
-        $(`.header .container .menu`).addClass(`hidden`);
-        $(`body`).removeClass(`disable-scroll`);
-
-        $(`.filter`).removeClass(`filter-show`);
-        $(`.filter`).addClass(`filter-fade_out`);
-        setTimeout(()=>{
-            $(`.filter`).removeClass(`filter-fade_out`);
-            $(`.filter`).addClass(`filter-hidden`);
+        document.querySelector(`.filter`).classList.remove(`filter-show`);
+        document.querySelector(`.filter`).classList.add(`filter-fade_out`);
+        setTimeout(() => {
+            document.querySelector(`.filter`).classList.remove(`filter-fade_out`);
+            document.querySelector(`.filter`).classList.add(`filter-hidden`);
         }, 350);
     };
 
-    $(this).toggleClass("is-active");
-  });
+    document.querySelector(`.header > .container > .menu`).classList.toggle(`hidden`);
+    document.querySelector(`.header > .container > .menu`).classList.toggle(`show`);
+    document.querySelector(`body`).classList.toggle(`disable-scroll`);
+    document.querySelector(`.header > .container > .menu_toggle`).classList.toggle("is-active");
+}
