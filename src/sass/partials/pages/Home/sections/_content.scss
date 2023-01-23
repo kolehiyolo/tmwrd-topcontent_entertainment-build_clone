@@ -31,11 +31,19 @@
                 &-unrestricted,
                 &-anonymous {
                     flex-direction: row;
+
+                    .image {
+                        justify-content: flex-start;
+                    }
                 }
 
                 &-privacy,
                 &-fast {
                     flex-direction: row-reverse;
+
+                    .image {
+                        justify-content: flex-end;
+                    }
                 }
 
                 .text,
@@ -60,9 +68,13 @@
                     // width: 100vw;
                     flex: 1 1 0px;
                     width: 0;
+                    display: flex;
+                    flex-direction: row;
+                    align-self: center;
+                    padding: 20px;
 
                     img {
-                        width: 100%;
+                        width: 500px;
                     }
                 }
             }
