@@ -28,13 +28,13 @@
 
                 &-audiobooks {}
 
-                &-movies,
-                &-games {
+                &-unrestricted,
+                &-anonymous {
                     flex-direction: row;
                 }
 
-                &-music,
-                &-audiobooks {
+                &-privacy,
+                &-fast {
                     flex-direction: row-reverse;
                 }
 

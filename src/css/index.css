@@ -494,16 +494,12 @@ html body .filter-show {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     text-align: center;
     gap: 10px;
   }
-  html body .main-home .section-hero .content_type .list .item i {
-    font-size: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  html body .main-home .section-hero .content_type .list .item img {
+    width: 50px;
   }
   html body .main-home .section-hero .content_type .list .item p {
     text-transform: uppercase;
@@ -823,10 +819,10 @@ html body .main-home .section-about .body img {
     display: flex;
     background-image: var(--gradient-sky);
   }
-  html body .main-home .section-content .list .item-movies, html body .main-home .section-content .list .item-games {
+  html body .main-home .section-content .list .item-unrestricted, html body .main-home .section-content .list .item-anonymous {
     flex-direction: row;
   }
-  html body .main-home .section-content .list .item-music, html body .main-home .section-content .list .item-audiobooks {
+  html body .main-home .section-content .list .item-privacy, html body .main-home .section-content .list .item-fast {
     flex-direction: row-reverse;
   }
   html body .main-home .section-content .list .item .text,
@@ -1026,6 +1022,7 @@ html body .main-home .section-join_us .content .img {
     width: 100vw;
     padding: 20px;
     background-image: var(--gradient-sky);
+    margin-bottom: 30px;
   }
   html body .main-home .section-bundle_banner .head,
 html body .main-home .section-bundle_banner .body {
@@ -1037,9 +1034,29 @@ html body .main-home .section-bundle_banner .body {
   }
   html body .main-home .section-bundle_banner .body {
     padding: 20px 50px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
   html body .main-home .section-bundle_banner .body .list {
     padding: 0 0 0 30px;
+  }
+  html body .main-home .section-bundle_banner .body .btn-continue {
+    background-color: var(--color-primary);
+    text-transform: uppercase;
+    font-size: 35px;
+    font-family: var(--font-1);
+    font-weight: bold;
+    color: var(--color-white-1);
+    border: none;
+    padding: 20px 0px;
+    display: block;
+    width: 100%;
+    transition: 0.5s all;
+    max-width: 350px;
+  }
+  html body .main-home .section-bundle_banner .body .btn-continue:hover {
+    background-color: var(--color-primary-lighter);
   }
 }
 @media (min-width: 0px) and (max-width: 640px) {
@@ -1050,6 +1067,9 @@ html body .main-home .section-bundle_banner .body {
 html body .main-home .section-bundle_banner .body {
     width: 100%;
     padding: 20px;
+  }
+  html body .main-home .section-bundle_banner .body .btn-continue {
+    padding: 10px 0px;
   }
 }
 @media (min-width: 641px) and (max-width: 1200px) {
