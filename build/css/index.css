@@ -2,6 +2,7 @@
   --color-primary: #015dc7;
   --color-primary-lighter: #2d8ee9;
   --color-text: #2f2c2c;
+  --color-text-2: #545454;
   --color-container-1: #f5f5f5;
   --color-white-1: #ffffff;
   --color-white-2: #e6e6e6;
@@ -814,6 +815,10 @@ html body .main-home .section-about .body img {
     gap: 20px;
     -ms-flex-pack: center;
         justify-content: center;
+    min-height: 270px;
+    position: relative;
+    -ms-flex-align: stretch;
+        align-items: stretch;
   }
   html body .main-home .section-features .cards .list .item {
     display: -ms-flexbox;
@@ -828,7 +833,8 @@ html body .main-home .section-about .body img {
         flex: 1 1 0px;
     width: 0;
     background-color: var(--color-container-1);
-    box-shadow: 0 5px 5px var(--color-black-1);
+    box-shadow: 0px 3px 5px #888888;
+    color: var(--color-text-2);
   }
   html body .main-home .section-features .cards .list .item .head {
     display: -ms-flexbox;
@@ -856,6 +862,9 @@ html body .main-home .section-about .body img {
   html body .main-home .section-features .cards .list .item .head h3 {
     font-size: 20px;
     font-weight: bold;
+  }
+  html body .main-home .section-features .cards .list .item .body p {
+    font-size: 18px;
   }
   html body .main-home .section-features .button {
     display: -ms-flexbox;

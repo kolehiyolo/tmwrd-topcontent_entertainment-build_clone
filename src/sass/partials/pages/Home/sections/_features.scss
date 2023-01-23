@@ -22,6 +22,9 @@
                 flex-direction: row;
                 gap: 20px;
                 justify-content: center;
+                min-height: 270px;
+                position: relative;
+                align-items: stretch;
 
                 .item {
                     display: flex;
@@ -32,7 +35,10 @@
                     flex: 1 1 0px;
                     width: 0;
                     background-color: var(--color-container-1);
-                    box-shadow: 0 5px 5px var(--color-black-1);
+                    // TODO Fix me
+                    // box-shadow: 0 5px 5px var(--color-black-1);
+                    box-shadow: 0px 3px 5px #888888;
+                    color: var(--color-text-2);
 
                     &-secure {}
 
@@ -63,7 +69,9 @@
                     }
 
                     .body {
-                        p {}
+                        p {
+                            font-size: 18px;
+                        }
                     }
                 }
             }
