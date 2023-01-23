@@ -1,22 +1,20 @@
 const gulp = require("gulp");
-const uglify = require("gulp-uglify");
 const sass = require("gulp-dart-sass");
-const plumber = require("gulp-plumber");
-const imagemin = require("gulp-imagemin");
-const cache = require("gulp-cache");
-const jpegrecompress = require("imagemin-jpeg-recompress");
-const pngquant = require("imagemin-pngquant");
-const rigger = require("gulp-rigger");
-const htmlpartial = require("gulp-html-partial");
-const del = require("del");
 const sourcemaps = require("gulp-sourcemaps");
 const browserSync = require("browser-sync").create();
-const autoprefixer = require("gulp-autoprefixer");
 const cssnano = require("gulp-cssnano");
+const uglify = require("gulp-uglify");
 const rename = require("gulp-rename");
-
-// ! TODO
 const concat = require("gulp-concat");
+const imagemin = require("gulp-imagemin");
+const jpegrecompress = require("imagemin-jpeg-recompress");
+const pngquant = require("imagemin-pngquant");
+const cache = require("gulp-cache");
+const htmlpartial = require("gulp-html-partial");
+const autoprefixer = require("gulp-autoprefixer");
+const del = require("del");
+const plumber = require("gulp-plumber");
+const rigger = require("gulp-rigger");
 const replace = require("gulp-replace");
 const svgmin = require("gulp-svgmin");
 const svgstore = require("gulp-svgstore");
@@ -38,36 +36,35 @@ var autoprefixerList = [
 // paths to source files (src), to ready-made files (build), as well as to those whose changes need to be monitored (watch)
 var paths = {
   build: {
-    html: "build/pages",
-    // js: "build/js/",
-    // css: "build/css/",
-    // img: "build/img/",
-    // fonts: "build/fonts/",
+    html: "build/",
+    js: "build/js/",
+    css: "build/css/",
+    img: "build/img/",
+    fonts: "build/fonts/",
   },
   src: {
-    html: "src/pages/*.html",
+    html: "src/**/*.html",
+    js: "src/js/common.js",
+    style: "src/sass/common.scss",
+    img: "src/img/**/*.*",
+    fonts: "src/fonts/**/*.*",
+    svgSrc: "src/svg/src/**/*.*",
+    svgDist: "src/svg/dist/",
+    jsSvg: "src/js/svg.js",
     partials: "src/partials/",
     buildFiles: "build/**",
     build: "build/",
-    // js: "src/js/common.js",
-    // style: "src/sass/common.scss",
-    // img: "src/img/**/*.*",
-    // fonts: "src/fonts/**/*.*",
-    // svgSrc: "src/svg/src/**/*.*",
-    // svgDist: "src/svg/dist/",
-    // jsSvg: "src/js/svg.js",
   },
   watch: {
-    // html: "src/**/*.html",
-    // js: "src/js/**/*.js",
-    // css: "src/sass/**/*.scss",
-    // img: "src/img/**/*.*",
-    // fonts: "src/fonts/**/*.*",
+    html: "src/**/*.html",
+    js: "src/js/**/*.js",
+    css: "src/sass/**/*.scss",
+    img: "src/img/**/*.*",
+    fonts: "src/fonts/**/*.*",
   },
   clean: "./build",
 };
 
-// ! TODO
 // make svgs
 gulp.task("svg-make", function () {
   del.sync(paths.src.svgDist);
@@ -87,7 +84,7 @@ gulp.task("svg-make", function () {
             {
               cleanupIDs: {
                 prefix: prefix + "-",
-                minify: true,
+                minify: true,1
               },
             },
             {
@@ -148,7 +145,7 @@ gulp.task("css:build", function (done) {
   done();
 });
 
-// ! TODO
+
 gulp.task("js:build", function (done) {
   return gulp
     .src(paths.src.js) // get the common.js file
@@ -164,7 +161,6 @@ gulp.task("js:build", function (done) {
   done();
 });
 
-// ! TODO
 // copy fonts
 gulp.task("fonts:build", function (done) {
   return gulp.src(paths.src.fonts).pipe(gulp.dest(paths.build.fonts));
@@ -199,7 +195,6 @@ gulp.task("clean:build", function (done) {
   done();
 });
 
-// ! TODO
 // clear cache
 gulp.task("cache:clear", function (done) {
   return cache.clearAll();

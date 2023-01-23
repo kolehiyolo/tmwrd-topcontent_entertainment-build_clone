@@ -38,5 +38,5 @@ function showPopup() {
 
     document.querySelector(`body`).classList.add(`disable-scroll`);
 }
-//?= main.js
 //?= svg.js
+//?= main.js

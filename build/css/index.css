@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
+  --color-green: #01C77C;
   --color-primary: #24a2fe;
   --color-primary-lighter: #1d83cc;
   --color-footer: #071d2b;
@@ -144,21 +145,24 @@ html body .txt-bold {
     width: 100%;
   }
   html body .header .container .menu .list li.item-register .register-btn {
-    border: solid 4px var(--color-primary);
-    background-color: transparent;
-    padding: 5px 20px;
-    color: var(--color-primary);
-    text-transform: uppercase;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    padding: 5px 0px;
     transition: 0.25s all;
+  }
+  html body .header .container .menu .list li.item-register .register-btn img {
+    width: 25px;
   }
   html body .header .container .menu .list li.item-register .register-btn:before {
     content: "";
     background-color: transparent;
     display: block;
-  }
-  html body .header .container .menu .list li.item-register:hover .register-btn {
-    border: solid 4px var(--color-primary-lighter);
-    color: var(--color-primary-lighter);
   }
   html body .header .container .menu_toggle {
     display: none;
@@ -628,6 +632,7 @@ html body .filter-show {
     font-family: var(--font-1);
     font-size: 2.5rem;
     text-align: center;
+    font-weight: 400;
   }
   html body .main-home .section-hero .intro .txt-title-2 {
     display: none;
@@ -671,7 +676,7 @@ html body .filter-show {
     display: block;
     width: 12px;
     height: 12px;
-    background-color: var(--color-primary);
+    background-color: var(--color-green);
     border-radius: 50%;
   }
   html body .main-home .section-hero .content_type .list {
@@ -731,7 +736,7 @@ html body .filter-show {
   html body .main-home .section-hero .steps .list .item .step_number {
     width: 50px;
     height: 50px;
-    background-color: var(--color-primary);
+    background-color: #b6b6b6;
     border-radius: 50%;
     display: -ms-flexbox;
     display: flex;
@@ -774,11 +779,14 @@ html body .filter-show {
     display: block;
   }
   html body .main-home .section-hero .intro .txt-subtitle {
-    font-size: 1.3px;
+    font-size: 1.3rem;
     display: none;
   }
   html body .main-home .section-hero .intro .btn-continue {
     padding: 10px 0px;
+  }
+  html body .main-home .section-hero .intro .txt-compatibility {
+    font-size: 0.95rem;
   }
   html body .main-home .section-hero .intro .txt-compatibility-1 {
     display: none;
