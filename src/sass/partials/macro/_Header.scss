@@ -75,7 +75,7 @@
                             text-transform: uppercase;
                             border: none;
                             background-color: transparent;
-                            font-size: 0.7rem;
+                            font-size: 0.9rem;
 
                             &:hover {
                                 color: var(--color-white-hover);
@@ -149,18 +149,18 @@
 
                 .hamburger {
                     // border: dashed 1px red;
-                    width: 26px;
-                    height: 26px;
+                    width: 24px;
+                    height: 24px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    gap: 7px;
+                    gap: 6px;
                     
                     .line {
-                        width: 26px;
+                        width: 24px;
                         height: 4px;
-                        background-color: var(--color-text);
+                        background-color: var(--color-text-2);
                         // border-radius: 5px;
                         position: relative;
                         top: 0;
