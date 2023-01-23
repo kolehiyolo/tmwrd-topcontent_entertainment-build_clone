@@ -66,6 +66,7 @@ function showPopup() {
     $(`.blur_filter`).removeClass(`blur_filter-hidden`);
 
     $(`body`).addClass(`disable-scroll`);
+    // $(`.filter`).addClass(`filter-show`);
 }
 //?= main.js
 //?= svg.js
