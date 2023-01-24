@@ -155,16 +155,16 @@
 
                 .hamburger {
                     // border: dashed 1px red;
-                    width: 24px;
-                    height: 24px;
+                    width: 20px;
+                    height: 20px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    gap: 6px;
+                    gap: 4px;
                     
                     .line {
-                        width: 24px;
+                        width: 20px;
                         height: 4px;
                         background-color: var(--color-text-2);
                         // border-radius: 5px;

@@ -170,8 +170,8 @@ html body .txt-bold {
     border: none;
   }
   html body .header .container .menu_toggle .hamburger {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -180,10 +180,10 @@ html body .txt-bold {
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    gap: 6px;
+    gap: 4px;
   }
   html body .header .container .menu_toggle .hamburger .line {
-    width: 24px;
+    width: 20px;
     height: 4px;
     background-color: var(--color-text-2);
     position: relative;
@@ -302,6 +302,9 @@ html body .txt-bold {
     -ms-flex-direction: row;
         flex-direction: row;
     gap: 30px;
+  }
+  html body .footer .container .links-2 li:nth-child(1) {
+    list-style-type: none;
   }
 }
 @media (min-width: 0px) and (max-width: 640px) {
@@ -1125,6 +1128,7 @@ html body .main-home .section-content .list .item .image {
   }
   html body .main-home .section-content .list .item .image img {
     border-radius: 20px;
+    width: 380px;
   }
 }
 @media (min-width: 0px) and (max-width: 640px) {

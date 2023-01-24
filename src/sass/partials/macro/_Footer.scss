@@ -45,6 +45,10 @@
                 gap: 30px;
 
                 li {
+                    &:nth-child(1) {
+                        list-style-type: none;
+                    }
+
                     a {}
                 }
             }
