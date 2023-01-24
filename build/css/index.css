@@ -1358,7 +1358,7 @@ html body .main-home .section-join_us .content .img {
     font-size: 0.82rem;
   }
 }
-@media (min-width: 0px) and (max-width: 990px) {
+@media (min-width: 0px) and (max-width: 640px) {
   html body .main-home .section-content_cards {
     width: 100%;
     padding: 50px 20px 50px 20px;
@@ -1366,6 +1366,19 @@ html body .main-home .section-join_us .content .img {
   html body .main-home .section-content_cards .list {
     -ms-flex-direction: column;
         flex-direction: column;
+  }
+  html body .main-home .section-content_cards .list .item {
+    width: 100%;
+  }
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+  html body .main-home .section-content_cards {
+    width: 100%;
+  }
+  html body .main-home .section-content_cards .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
   html body .main-home .section-content_cards .list .item {
     width: 100%;

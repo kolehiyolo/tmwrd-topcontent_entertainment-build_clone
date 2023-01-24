@@ -72,7 +72,7 @@
     }
 
     // * Mobile Sizes
-    @media (min-width: 0px) and (max-width: 990px) {
+    @media (min-width: 0px) and (max-width: 640px) {
         & {
             width: 100%;
             padding: 50px 20px 50px 20px;
@@ -104,6 +104,42 @@
             }
         }
     }
+
+    // * Mid-tablet Size
+    @media (min-width: 641px) and (max-width: 1000px) {
+        & {
+            width: 100%;
+        }
+
+        .list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            .item {
+                width: 100%;
+
+                &-movies {}
+
+                &-music {}
+
+                &-games {}
+
+                &-audibooks {}
+
+                .img {
+                    i {}
+                }
+
+                .text {
+                    h3 {}
+
+                    p {}
+                }
+            }
+        }
+    }
+
 
     // * Mid-tablet Size
     @media (min-width: 990px) and (max-width: 1200px) {
