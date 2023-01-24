@@ -127,7 +127,7 @@ html body .txt-bold {
     text-decoration: none;
     color: var(--color-text);
     font-weight: bold;
-    transition: 0.2s all;
+    transition: 0.2s color;
     padding: 0px;
     text-transform: uppercase;
     border: none;
@@ -166,7 +166,6 @@ html body .txt-bold {
     -ms-flex-align: center;
         align-items: center;
     padding: 5px 0px;
-    transition: 0.25s all;
   }
   html body .header .container .menu .list li.item-register .register-btn svg {
     width: 25px;
@@ -206,7 +205,9 @@ html body .txt-bold {
     bottom: 0;
     -webkit-transform: translate(0, 0) rotate(180deg);
             transform: translate(0, 0) rotate(180deg);
-    transition: 0.5s all;
+    transition: 0.5s top, 0.5s width, 0.5s -webkit-transform;
+    transition: 0.5s top, 0.5s width, 0.5s transform;
+    transition: 0.5s top, 0.5s width, 0.5s transform, 0.5s -webkit-transform;
   }
   html body .header .container .menu_toggle.is-active .line-1 {
     top: 50%;
@@ -532,7 +533,7 @@ html body .popup-register .form {
     color: var(--color-white-1);
     border: none;
     padding: 15px 15px;
-    transition: 0.5s all;
+    transition: 0.5s background-color;
     text-align: center;
     cursor: pointer;
   }
@@ -693,7 +694,7 @@ html body .main-home .section-hero .steps {
     padding: 20px 0px;
     display: block;
     width: 100%;
-    transition: 0.5s all;
+    transition: 0.5s background-color;
     max-width: 350px;
     text-align: center;
   }
@@ -1074,7 +1075,7 @@ html body .main-home .section-about .body picture {
     color: var(--color-white-1);
     border: none;
     padding: 20px 90px;
-    transition: 0.5s all;
+    transition: 0.5s background-color;
     text-align: center;
   }
   html body .main-home .section-features .button .btn-continue:hover {
@@ -1292,7 +1293,7 @@ html body .main-home .section-join_us .content .img {
     color: var(--color-white-1);
     border: none;
     padding: 20px 90px;
-    transition: 0.5s all;
+    transition: 0.5s background-color;
     text-align: center;
   }
   html body .main-home .section-join_us .button .btn-continue:hover {
@@ -1459,7 +1460,7 @@ html body .main-home .section-bundle_banner .body {
     padding: 20px 0px;
     display: block;
     width: 100%;
-    transition: 0.5s all;
+    transition: 0.5s background-color;
     max-width: 350px;
     text-align: center;
   }
