@@ -30,19 +30,17 @@
         </a>
                 <nav class="menu hidden">
                     <ul class="list">
-                        <li class="item-home item"> <a class="link-home link" onclick="showPopup()">Home</a>
+                        <li class="item-home item"> <a class="link-home link popup-trigger">Home</a>
                         </li>
-                        <li class="item-entertainment item"> <a class="link-entertainment link" onclick="showPopup()">Entertainment</a>
+                        <li class="item-entertainment item"> <a class="link-entertainment link popup-trigger">Entertainment</a>
                         </li>
-                        <li class="item-security item"> <a class="link-security link" onclick="showPopup()">Security</a>
+                        <li class="item-security item"> <a class="link-security link popup-trigger">Security</a>
                         </li>
-                        <li class="item-privacy item"> <a class="link-privacy link" onclick="showPopup()">Privacy</a>
+                        <li class="item-privacy item"> <a class="link-privacy link popup-trigger">Privacy</a>
                         </li>
-                        <li class="item-register item"> <a class="register-btn" onclick="showPopup()">
+                        <li class="item-register item"> <a class="register-btn popup-trigger">
 
                         <svg class="icon"><use xlink:href="#header-search"></use></svg>
-
-                        <!-- <img src="svg/header-search.svg" alt="Search Icon"> -->
 
                     </a>
                         </li>
@@ -62,8 +60,7 @@
                 <div class="intro">
                      <h1 class="txt-title-1 txt-title">Online <span class="txt-bold">Registration</span></h1>
                      <h1 class="txt-title-2 txt-title">Mobile <span class="txt-bold">Activation</span></h1>
-                    <!-- <p class="txt-subtitle">Access <span class="txt-bold">the best digital content</span> from any region</p> -->
-                    <button class="btn-continue" onclick="showPopup()">Continue</button>
+                    <!-- <p class="txt-subtitle">Access <span class="txt-bold">the best digital content</span> from any region</p> --> <a class="btn-continue popup-trigger">Continue</a>
                     <p class="txt-compatibility-1 txt-compatibility"><span class="green_dot"></span> Your Connection: Fast</p>
                     <p class="txt-compatibility-2 txt-compatibility"><span class="green_dot"></span> All devices compatible</p>
                 </div>
@@ -174,8 +171,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="button">
-                    <button class="btn-continue" onclick="showPopup()">Continue</button>
+                <div class="button"> <a class="btn-continue popup-trigger">Continue</a>
                 </div>
             </section>
             <section class="section-content">
@@ -291,8 +287,7 @@
                         </picture>
                     </div>
                 </div>
-                <div class="button">
-                    <button class="btn-continue" onclick="showPopup()">Continue</button>
+                <div class="button"> <a class="btn-continue popup-trigger">Continue</a>
                 </div>
             </section>
             <section class="section-content_cards">
@@ -368,8 +363,7 @@
                         <li class="item-5 item">
                             <p>Start your free membership, cancel anytime</p>
                         </li>
-                    </ul>
-                    <button class="btn-continue" onclick="showPopup()">Continue</button>
+                    </ul> <a class="btn-continue popup-trigger">Continue</a>
                 </div>
             </section>
             <section class="section-terms">
@@ -446,10 +440,26 @@
                 <div class="label">
                     <p>Create your free account</p>
                 </div>
-                <form action="">
-                    <input required class="input-email input" type="email" placeholder="Fill in your email">
-                    <input required class="input-password input" type="password" placeholder="Create your password">
-                    <button type="submit" class="btn-continue">Continue</button>
+                <!-- <form action="">
+
+            <input required class="input-email input" type="email" placeholder="Fill in your email">
+
+            <input required class="input-password input" type="password" placeholder="Create your password">
+
+            <button type="submit" class="btn-continue">Continue</button>
+
+        </form> -->
+                <form method="get" action="/order-free/" id="cc_form">
+                    <div class="field mail">
+                        <input type="email" name="email" placeholder="Fill in your email" value="">
+                        <div class="error email-wrong">The email address is invalid</div>
+                    </div>
+                    <div class="field password">
+                        <input type="text" name="password" placeholder="Create your password"
+                        value="">
+                        <div class="error password-wrong">The password is too short</div>
+                    </div>
+                    <button type="button" class="btn-submit">Continue</button>
                 </form>
                 <div class="disclaimer">
                     <p><span>By clicking the button you agree with the </span><span><a href="https://hotbotvpn.com/terms/" target="_blank">Terms & Conditions</a> and the <a href="https://hotbotvpn.com/privacy/" target="_blank">Privacy Policy</a></span>

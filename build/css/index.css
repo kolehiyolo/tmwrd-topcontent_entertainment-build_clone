@@ -26,6 +26,9 @@ html body #svg-icons {
   opacity: 0;
   z-index: -1;
 }
+html body .btn-continue, html body .popup-trigger {
+  cursor: pointer;
+}
 
 html {
   scroll-behavior: auto !important;
@@ -493,12 +496,33 @@ html body .popup-register .form {
     -ms-flex-align: stretch;
         align-items: stretch;
   }
-  html body .popup-register .form form .input {
+  html body .popup-register .form form .field {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    gap: 5px;
+    width: 100%;
+  }
+  html body .popup-register .form form .field input {
     border: solid 1px var(--color-black-1);
     border-radius: 2px;
     padding: 10px 20px;
+    width: 100%;
   }
-  html body .popup-register .form form .btn-continue {
+  html body .popup-register .form form .field .error {
+    width: 100%;
+    text-align: center;
+    color: red !important;
+    font-size: 0.7rem;
+    opacity: 0;
+    display: none;
+  }
+  html body .popup-register .form form .field .error-showing {
+    opacity: 1;
+    display: block;
+  }
+  html body .popup-register .form form .btn-submit {
     background-color: var(--color-primary);
     text-transform: uppercase;
     font-size: 1.25rem;
@@ -509,8 +533,9 @@ html body .popup-register .form {
     padding: 15px 15px;
     transition: 0.5s all;
     text-align: center;
+    cursor: pointer;
   }
-  html body .popup-register .form form .btn-continue:hover {
+  html body .popup-register .form form .btn-submit:hover {
     background-color: var(--color-primary-lighter);
   }
   html body .popup-register .form .disclaimer {
@@ -665,6 +690,7 @@ html body .filter-show {
     width: 100%;
     transition: 0.5s all;
     max-width: 350px;
+    text-align: center;
   }
   html body .main-home .section-hero .intro .btn-continue:hover {
     background-color: var(--color-primary-lighter);
@@ -1025,6 +1051,7 @@ html body .main-home .section-about .body img {
     border: none;
     padding: 20px 90px;
     transition: 0.5s all;
+    text-align: center;
   }
   html body .main-home .section-features .button .btn-continue:hover {
     background-color: var(--color-primary-lighter);
@@ -1238,6 +1265,7 @@ html body .main-home .section-join_us .content .img {
     border: none;
     padding: 20px 90px;
     transition: 0.5s all;
+    text-align: center;
   }
   html body .main-home .section-join_us .button .btn-continue:hover {
     background-color: var(--color-primary-lighter);
@@ -1392,6 +1420,7 @@ html body .main-home .section-bundle_banner .body {
     width: 100%;
     transition: 0.5s all;
     max-width: 350px;
+    text-align: center;
   }
   html body .main-home .section-bundle_banner .body .btn-continue:hover {
     background-color: var(--color-primary-lighter);

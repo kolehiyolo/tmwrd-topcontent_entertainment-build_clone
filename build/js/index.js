@@ -25,12 +25,20 @@ function toggleHeaderMenu() {
     document.querySelector(`body`).classList.toggle(`disable-scroll`);
     document.querySelector(`.header > .container > .menu_toggle`).classList.toggle("is-active");
 }
+const links = document.querySelectorAll(`.popup-trigger`);
+
+links.forEach(link => {
+    link.addEventListener("click", function () {
+        showPopup();
+    });
+});
+
 function showPopup() {
     window.scrollTo(0, 0);
 
     document.querySelector(`.popup-register`).classList.add(`popup-showing`);
     document.querySelector(`.popup-register`).classList.remove(`popup-hidden`);
-    
+
     document.querySelector(`.blur_filter`).classList.add(`blur_filter-showing`);
     document.querySelector(`.blur_filter`).classList.remove(`blur_filter-hidden`);
 

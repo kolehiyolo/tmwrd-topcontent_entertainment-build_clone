@@ -40,6 +40,10 @@ html {
             opacity: 0;
             z-index: -1;
         }
+
+        .btn-continue, .popup-trigger {
+            cursor: pointer;
+        }
     }
 }
 
