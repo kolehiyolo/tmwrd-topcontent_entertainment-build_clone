@@ -1,6 +1,4 @@
 function showPopup() {
-    console.log(`showPopup Clicked`);
-
     window.scrollTo(0, 0);
 
     document.querySelector(`.popup-register`).classList.add(`popup-showing`);
