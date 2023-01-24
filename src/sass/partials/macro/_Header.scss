@@ -115,9 +115,11 @@
                                 padding: 5px 0px;
                                 // color: var(--color-primary);
                                 transition: 0.25s all;
+                                // background-color: black;
 
-                                img {
+                                svg {
                                     width: 25px;
+                                    height: 25px;
                                 }
                                 
                                 &:before {

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+  console.log(`LESGO`); 
   //svg 
   document.getElementById('svg-icons').innerHTML = SVG_SPRITE;
 

@@ -4,7 +4,7 @@ const plumber = require("gulp-plumber"); // Error Tracking
 const del = require("del"); // Deleting Files
 const browserSync = require("browser-sync").create(); // ! TODO WHAT DOES THIS DO
 
-// * Processing JavaScript
+// * Minifying Plug-ins
 const uglify = require("gulp-uglify"); // For Minifying JavaScript
 
 // * Processing Images
@@ -30,11 +30,47 @@ const svgstore = require("gulp-svgstore");
 const svg2string = require("gulp-svg2string");
 const path = require('path');
 
-const concat = require("gulp-concat");
-const replace = require("gulp-replace");
+// * Paths Variables
+// -* Paths to source files (src), to ready-made files (build), as well as to those whose changes need to be monitored (watch)
+var paths = {
+  build: {
+    html: "build/",
+    js: "build/js/",
+    css: "build/css/",
+    img: "build/img/",
+    svg: "build/svg",
+    // fonts: "build/fonts/",
+  },
+  src: {
+    html: "src/*.html",
+    js: "src/js/index.js",
+    sass: "src/sass/index.scss",
+    partials: "src/partials/",
+    img: "src/img/**/*.*",
+    svg: "src/svg/**/*.*",
+    svgSrc: "src/svg/src/**/*.*",
+    svgDist: "src/svg/dist/",
+    jsSvg: "src/js/svg.js",
+    // style: "src/sass/common.scss",
+    // buildFiles: "build/**",
+    // build: "build/",
+    // fonts: "src/fonts/**/*.*",
+    // jsSvg: "src/js/svg.js",
+  },
+  watch: {
+    html: "src/*.html",
+    partials: "src/partials",
+    css: "src/sass/**/*.scss",
+    img: "src/img/**/*.*",
+    js: "src/js/**/*.js",
+    svg: "src/svg",
+    // fonts: "src/fonts/**/*.*",
+  },
+  clean: "./build",
+};
 
 // * Auto-Prefixer Options
-var autoprefixerList = [
+const autoprefixerList = [
   "Chrome >= 45",
   "Firefox ESR",
   "Edge >= 12",
@@ -45,61 +81,106 @@ var autoprefixerList = [
   "Opera >= 30",
 ];
 
-// * Paths Variables
-// -* Paths to source files (src), to ready-made files (build), as well as to those whose changes need to be monitored (watch)
-var paths = {
-  build: {
-    // html: "build/",
-    // js: "build/js/",
-    // css: "build/css/",
-    // img: "build/img/",
-    // fonts: "build/fonts/",
-    html: "build/",
-    js: "build/js/",
-    css: "build/css/",
-    img: "build/img/",
-    svg: "build/svg",
-  },
-  src: {
-    // html: "src/**/*.html",
-    // js: "src/js/common.js",
-    // style: "src/sass/common.scss",
-    // img: "src/img/**/*.*",
-    // fonts: "src/fonts/**/*.*",
-    // svgSrc: "src/svg/src/**/*.*",
-    // svgDist: "src/svg/dist/",
-    // jsSvg: "src/js/svg.js",
-    // partials: "src/partials/",
-    // buildFiles: "build/**",
-    // build: "build/",
-    html: "src/*.html",
-    js: "src/js/index.js",
-    sass: "src/sass/index.scss",
-    partials: "src/partials/",
-    img: "src/img/**/*.*",
-    svg: "src/svg/**/*.*",
-    svgSrc: "src/svg/src/**/*.*",
-    svgDist: "src/svg/dist/",
-    jsSvg: "src/js/svg.js",
-  },
-  watch: {
-    // html: "src/**/*.html",
-    // js: "src/js/**/*.js",
-    // css: "src/sass/**/*.scss",
-    // img: "src/img/**/*.*",
-    // fonts: "src/fonts/**/*.*",
-    html: "src/*.html",
-    partials: "src/partials",
-    css: "src/sass/**/*.scss",
-    img: "src/img/**/*.*",
-    js: "src/js/**/*.js",
-    svg: "src/svg",
-  },
-  clean: "./build",
-};
+// -* Delete Build Delectory
+gulp.task("clean:build", function (done) {
+  del.sync(paths.clean);
+  done();
+});
 
-// make svgs
-gulp.task("svg-make", function () {
+// -* Build HTML
+gulp.task("html:build", function (done) {
+  gulp
+    .src([paths.src.html, "!./src/partials/*"]) // Find all HTML files
+    .pipe(plumber()) // Tracking Errors
+    .pipe(
+      htmlpartial({
+        basePath: paths.src.partials,
+      })
+    ) // Import "<partial src="..."></partial>" partials
+    .pipe(rigger()) // Import "//=" partials
+    .pipe(gulp.dest(paths.build.html)) // Outputting compiled files to dest
+    .pipe(browserSync.reload({
+      stream: true
+    })); // Server Reboot
+  done();
+});
+
+// -* Build CSS
+gulp.task("css:build", function (done) {
+  gulp
+    .src(paths.src.sass) // get common.scss
+    .pipe(plumber()) // errors tracking
+    .pipe(sourcemaps.init()) // initialize sourcemap
+    .pipe(sass())
+    // .pipe(replace("/img/", " ../img/"))
+    // .pipe(replace("/fonts/", " ../fonts/"))
+    .pipe(
+      autoprefixer({
+        // add prefixes
+        // browsers: autoprefixerList,
+      })
+    )
+    .pipe(gulp.dest(paths.build.css))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(cssnano()) // minimizing CSS
+    .pipe(sourcemaps.write("./")) // write sourcemap
+    .pipe(gulp.dest(paths.build.css)) // upload to build
+    // .pipe(browserSync.reload({ stream: true })); // reboot the server
+  done();
+});
+
+// * Process Images
+gulp.task("image:build", function (done) {
+  gulp
+    .src(paths.src.img)
+    .pipe(
+      cache(
+        imagemin([
+          imagemin.gifsicle({
+            interlaced: true
+          }),
+          jpegrecompress({
+            progressive: true,
+            max: 90,
+            min: 80,
+          }),
+          pngquant(),
+          imagemin.svgo({
+            plugins: [{
+              removeViewBox: false
+            }]
+          }),
+        ])
+      )
+    )
+    .pipe(gulp.dest(paths.build.img));
+  done();
+});
+
+// -* Process JavaScript
+gulp.task("js:build", function (done) {
+  gulp
+    .src(paths.src.js) // get the common.js file
+    .pipe(plumber()) // to track errors
+    .pipe(rigger()) // import all specified files into common.js
+    .pipe(gulp.dest(paths.build.js))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(sourcemaps.init()) // initialize sourcemap
+    .pipe(uglify()) // minimizing js
+    .pipe(sourcemaps.write("./")) //  write sourcemap
+    .pipe(gulp.dest(paths.build.js)) // put in the finished file
+    .pipe(browserSync.reload({ stream: true })); // reboot the server
+  done();
+});
+
+// * Clone SVGs
+gulp.task("svg:clone", function () {
+  return gulp.src(paths.src.svg)
+    .pipe(gulp.dest(paths.build.svg));
+});
+
+// * Make SVGs
+gulp.task("svg:process", function () {
   del.sync(paths.src.svgDist);
 
   return gulp
@@ -138,135 +219,22 @@ gulp.task("svg-make", function () {
     .pipe(gulp.dest("./"));
 });
 
-// -* Build HTML
-gulp.task("html:build", function (done) {
-  gulp
-    .src([paths.src.html, "!./src/partials/*"]) // Find all HTML files
-    .pipe(plumber()) // Tracking Errors
-    .pipe(
-      htmlpartial({
-        basePath: paths.src.partials,
-      })
-    ) // Import "<partial src="..."></partial>" partials
-    .pipe(rigger()) // Import "//=" partials
-    .pipe(gulp.dest(paths.build.html)) // Outputting compiled files to dest
-    .pipe(browserSync.reload({
-      stream: true
-    })); // Server Reboot
-  done();
-});
-
-// -* Build CSS
-gulp.task("css:build", function (done) {
-  gulp
-    .src(paths.src.sass) // get common.scss
-    .pipe(plumber()) // errors tracking
-    .pipe(sourcemaps.init()) // initialize sourcemap
-    .pipe(sass())
-    // .pipe(replace("/img/", " ../img/"))
-    // .pipe(replace("/fonts/", " ../fonts/"))
-    .pipe(
-      autoprefixer({
-        // add prefixes
-        // browsers: autoprefixerList,
-      })
-    )
-    .pipe(gulp.dest(paths.build.css))
-    .pipe(rename({
-      suffix: ".min"
-    }))
-    .pipe(cssnano()) // minimizing CSS
-    .pipe(sourcemaps.write("./")) // write sourcemap
-    .pipe(gulp.dest(paths.build.css)) // upload to build
-    .pipe(browserSync.reload({
-      stream: true
-    })); // reboot the server
-  done();
-});
-
-// -* Build JavaScript 
-gulp.task("js:build", function (done) {
-  gulp
-    .src(paths.src.js) // get the common.js file
-    .pipe(plumber()) // to track errors
-    .pipe(rigger()) // import all specified files into common.js
-    .pipe(gulp.dest(paths.build.js))
-    .pipe(rename({
-      suffix: ".min"
-    }))
-    .pipe(sourcemaps.init()) // initialize sourcemap
-    .pipe(uglify()) // minimizing js
-    .pipe(sourcemaps.write("./")) //  write sourcemap
-    .pipe(gulp.dest(paths.build.js)) // put in the finished file
-    .pipe(browserSync.reload({
-      stream: true
-    })); // reboot the server
-  done();
-});
-
-// -* Copy Fonts
-gulp.task("fonts:build", function (done) {
-  gulp.src(paths.src.fonts).pipe(gulp.dest(paths.build.fonts));
-  done();
-});
-
-// -* Process Images
-gulp.task("image:build", function (done) {
-  gulp
-    .src(paths.src.img)
-    .pipe(
-      cache(
-        imagemin([
-          imagemin.gifsicle({
-            interlaced: true
-          }),
-          jpegrecompress({
-            progressive: true,
-            max: 90,
-            min: 80,
-          }),
-          pngquant(),
-          imagemin.svgo({
-            plugins: [{
-              removeViewBox: false
-            }]
-          }),
-        ])
-      )
-    )
-    .pipe(gulp.dest(paths.build.img)); // uploading finished files
-  done();
-});
-
-// -* Delete Build Delectory
-gulp.task("clean:build", function (done) {
-  del.sync(paths.clean);
-  done();
-});
-
-// -* Clear Cache
-gulp.task("cache:clear", function (done) {
-  cache.clearAll();
-  done();
-});
-
-// -* Build Task
+// * Build Task
 gulp.task(
   "build",
   gulp.parallel([
     "clean:build", // Delete the "build" directory
     "html:build", // Compile all HTML files and place onto "build"
     "image:build", // Process all images
-    "css:build", // Process SASS+CSS
+    // "css:build", // Process SASS+CSS
     "js:build",
-    "svg-make",
-    // "fonts:build",
     // "svg:clone",
+    "svg:process",
     // "fonts:build",
   ])
 );
 
-// -* Watch Task Done
+// * Watch Task
 gulp.task("watch", function () {
   browserSync.init({
     server: {
@@ -282,21 +250,25 @@ gulp.task("watch", function () {
         paths.watch.css,
         paths.watch.js,
         paths.watch.img,
-        // paths.watch.fonts,
         paths.watch.partials,
+        // paths.watch.svg
+        // paths.watch.fonts,
       ],
       gulp.parallel([
         "html:build",
         "css:build",
         "js:build",
         "image:build",
+        "clean:build",
+        "svg:process",
+        // "svg:clone",
         // "fonts:build",
       ])
     )
     .on("change", browserSync.reload);
 });
 
-// -* Default task
+// * Default task
 // -* Run "build" and "watch" tasks
 gulp.task("default", gulp.parallel(["build", "watch"]));
 // gulp.task("default", gulp.parallel(["build"]));
