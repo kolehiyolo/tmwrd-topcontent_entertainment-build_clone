@@ -11,7 +11,7 @@
 <!-- About Section image should have fallback -->
 <!-- Add links to all <a> -->
 <!-- Hero image should be actual img and not background -->
-Images should have explicit dimensions
+<!-- Images should have explicit dimensions -->
 
 <!-- ! Will have to learn -->
 
