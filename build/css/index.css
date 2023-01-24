@@ -28,6 +28,7 @@ html body #svg-icons {
 }
 html body .btn-continue, html body .popup-trigger {
   cursor: pointer;
+  text-decoration: none;
 }
 
 html {
@@ -649,10 +650,14 @@ html body .filter-show {
     -ms-flex-align: center;
         align-items: center;
     gap: 100px;
-    background-image: url("../img/section_hero-bg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100vw;
+    position: relative;
+    width: 100vw;
+  }
+  html body .main-home .section-hero .intro,
+html body .main-home .section-hero .content_type,
+html body .main-home .section-hero .steps {
+    position: relative;
+    z-index: 1;
   }
   html body .main-home .section-hero .intro {
     display: -ms-flexbox;
@@ -795,6 +800,18 @@ html body .filter-show {
     font-size: 1.3rem;
     text-align: center;
   }
+  html body .main-home .section-hero .img-bg {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  html body .main-home .section-hero .img-bg img {
+    width: 100%;
+    height: auto;
+  }
 }
 @media (min-width: 0px) and (max-width: 640px) {
   html body .main-home .section-hero {
@@ -893,6 +910,9 @@ html body .filter-show {
   html body .main-home .section-hero .steps .list .item .step_text {
     font-size: 0.875rem;
   }
+  html body .main-home .section-hero .img-bg {
+    display: none;
+  }
 }
 @media (min-width: 641px) and (max-width: 992px) {
   html body .main-home .section-hero .intro .txt-subtitle {
@@ -937,10 +957,14 @@ html body .filter-show {
         flex: 1 1 0;
     width: 0;
   }
-  html body .main-home .section-about .body img {
+  html body .main-home .section-about .body picture {
     -ms-flex: 1 1 0px;
         flex: 1 1 0;
     width: 0;
+  }
+  html body .main-home .section-about .body picture img {
+    width: 100%;
+    height: auto;
   }
 }
 @media (min-width: 0px) and (max-width: 640px) {
@@ -957,7 +981,7 @@ html body .filter-show {
     gap: 30px;
   }
   html body .main-home .section-about .body p,
-html body .main-home .section-about .body img {
+html body .main-home .section-about .body picture {
     width: 100%;
   }
 }
@@ -1242,8 +1266,12 @@ html body .main-home .section-join_us .content .img {
     height: 30px;
     fill: #cdd1de;
   }
-  html body .main-home .section-join_us .content .img img {
+  html body .main-home .section-join_us .content .img picture {
     width: 100%;
+  }
+  html body .main-home .section-join_us .content .img picture img {
+    width: 100%;
+    height: auto;
   }
   html body .main-home .section-join_us .button {
     display: -ms-flexbox;

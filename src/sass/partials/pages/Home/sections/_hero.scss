@@ -10,17 +10,25 @@
             // min-height: 100vh;
             // padding-top: 50px;
             padding: 220px 20px 50px 20px;
-
             display: flex;
             flex-direction: column;
             // justify-content: center;
             align-items: center;
             gap: 100px;
+            position: relative;
+            width: 100vw;
 
-            background-image: url("../img/section_hero-bg.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 100vw;
+            // background-image: url("../img/section_hero-bg.png");
+            // background-repeat: no-repeat;
+            // background-position: center;
+            // background-size: 100vw;
+        }
+
+        .intro,
+        .content_type,
+        .steps {
+            position: relative;
+            z-index: 1;
         }
 
         .intro {
@@ -181,6 +189,19 @@
                 }
             }
         }
+
+        .img-bg {
+            position: absolute;
+            z-index: 0;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            
+            img {
+                width: 100%;
+                height: auto;    
+            }
+        }
     }
 
     // * Mobile Sizes
@@ -316,6 +337,10 @@
                     }
                 }
             }
+        }
+
+        .img-bg {
+            display: none;
         }
     }
 

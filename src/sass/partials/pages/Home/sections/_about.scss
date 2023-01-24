@@ -36,9 +36,14 @@
                 width: 0;
             }
 
-            img {
+            picture {
                 flex: 1 1 0;
                 width: 0;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
             }
         }
     }
@@ -61,13 +66,13 @@
             gap: 30px;
 
             p,
-            img {
+            picture {
                 width: 100%;
             }
 
             p {}
 
-            img {}
+            picture {}
         }
     }
 
