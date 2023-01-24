@@ -1,9 +1,9 @@
 <!-- * Very Doable -->
 
 <!-- ? I have an idea but not sure -->
-Setup popup form to actual
+<!-- Header nav should have <a> and not buttons -->
 Update onclicks to be event listener handled
-Header nav should have <a> and not buttons
+Setup popup form to actual
 
 <!-- ! Will have to learn -->
 
