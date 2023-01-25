@@ -378,10 +378,10 @@ html body .txt-bold {
 }
 @media (min-width: 0px) {
   html body .popup-register {
-    position: absolute;
+    position: fixed;
     background-color: white;
-    top: 50vh;
-    left: 50vw;
+    top: 50%;
+    left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     width: 700px;
@@ -586,11 +586,11 @@ html body .popup-register .form {
 }
 @media (min-width: 0px) {
   html body .blur_filter {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    bottom: 0;
+    right: 0;
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
   }
@@ -1243,7 +1243,7 @@ html body .main-home .section-content .list .item .image {
     display: flex;
     -ms-flex-direction: row-reverse;
         flex-direction: row-reverse;
-    gap: 20px;
+    gap: 50px;
     -ms-flex-pack: center;
         justify-content: center;
   }
@@ -1285,6 +1285,15 @@ html body .main-home .section-join_us .content .img {
     width: 30px;
     height: 30px;
     fill: #cdd1de;
+  }
+  html body .main-home .section-join_us .content .img {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+    width: 100%;
   }
   html body .main-home .section-join_us .content .img picture {
     width: 100%;

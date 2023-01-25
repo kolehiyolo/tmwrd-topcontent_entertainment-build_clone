@@ -1,13 +1,14 @@
 const links = document.querySelectorAll(`.popup-trigger`);
 
 links.forEach(link => {
-    link.addEventListener("click", function () {
+    link.addEventListener("click", function (event) {
+        event.preventDefault()
         showPopup();
     });
 });
 
 function showPopup() {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
 
     document.querySelector(`.popup-register`).classList.add(`popup-showing`);
     document.querySelector(`.popup-register`).classList.remove(`popup-hidden`);

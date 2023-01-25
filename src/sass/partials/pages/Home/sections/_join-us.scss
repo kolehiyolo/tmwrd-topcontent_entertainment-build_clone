@@ -19,7 +19,7 @@
         .content {
             display: flex;
             flex-direction: row-reverse;
-            gap: 20px;
+            gap: 50px;
             justify-content: center;
 
             .text,
@@ -63,6 +63,11 @@
             }
 
             .img {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+
                 picture {
                     width: 100%;
 
