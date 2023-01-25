@@ -151,20 +151,19 @@ html {
 
         main {
             flex-grow: 1;
+        }
+    }
+}
 
-            // // * All Sizes
-            // @media (min-width: 0px) {
-            //     padding: 100px 0px 0px;
-            //     display: flex;
-            //     flex-direction: column;
-            //     flex-grow: 1;
+// * Hero Section Left and Right SVG Backgrounds Saturate
+html {
+    body {
+        #section_hero-bg_left {
+            filter: saturate(0%);
+        }
 
-            // }
-
-            // // * Smaller Desktop    
-            // @media (min-width: 1200px) {
-            //     width: 1200px;
-            // }
+        #section_hero-bg_right {
+            filter: saturate(0%);
         }
     }
 }

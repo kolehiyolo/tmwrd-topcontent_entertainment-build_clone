@@ -1487,4 +1487,11 @@ html body {
 }
 html body main {
   flex-grow: 1;
+}
+
+html body #section_hero-bg_left {
+  filter: saturate(0%);
+}
+html body #section_hero-bg_right {
+  filter: saturate(0%);
 }/*# sourceMappingURL=index.css.map */

@@ -1698,3 +1698,12 @@ html body main {
   -ms-flex-positive: 1;
       flex-grow: 1;
 }
+
+html body #section_hero-bg_left {
+  -webkit-filter: saturate(0%);
+          filter: saturate(0%);
+}
+html body #section_hero-bg_right {
+  -webkit-filter: saturate(0%);
+          filter: saturate(0%);
+}
