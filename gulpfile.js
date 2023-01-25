@@ -12,6 +12,8 @@ const imagemin = require("gulp-imagemin"); // For Minifying Images
 const cache = require("gulp-cache"); // ! TODO WHAT
 const jpegrecompress = require("imagemin-jpeg-recompress"); // ! TODO WHAT
 const pngquant = require("imagemin-pngquant"); // ! TODO WHAT
+const webp = require('imagemin-webp');
+const extReplace = require('gulp-ext-replace');
 
 // * Processing SASS & CSS
 const sass = require("gulp-dart-sass"); // For Compiling SASS
@@ -32,6 +34,31 @@ const path = require('path');
 
 const concat = require("gulp-concat");
 const replace = require("gulp-replace");
+
+// const gulp = require('gulp');
+// const sass = require("gulp-dart-sass");
+// const sourcemaps = require('gulp-sourcemaps');
+// const browserSync = require('browser-sync').create();
+// const cssnano = require('gulp-cssnano');
+// const uglify = require('gulp-uglify');
+// const rename = require('gulp-rename');
+// const concat = require('gulp-concat');
+// const imagemin = require('gulp-imagemin');
+// const jpegrecompress = require('imagemin-jpeg-recompress');
+// const pngquant = require('imagemin-pngquant');
+// const webp = require('imagemin-webp');
+// const cache = require('gulp-cache');
+// const htmlpartial = require('gulp-html-partial');
+// const autoprefixer = require('gulp-autoprefixer');
+// const del = require('del');
+// const plumber = require('gulp-plumber');
+// const rigger = require('gulp-rigger');
+// const replace = require('gulp-replace');
+// const extReplace = require('gulp-ext-replace');
+// const svgmin = require("gulp-svgmin");
+// const svgstore = require("gulp-svgstore");
+// const svg2string = require("gulp-svg2string");
+// const path = require('path');
 
 // * Auto-Prefixer Options
 var autoprefixerList = [
@@ -211,31 +238,35 @@ gulp.task("fonts:build", function (done) {
 });
 
 // -* Process Images
-gulp.task("image:build", function (done) {
+gulp.task('image:build', function (done) {
   gulp
-    .src(paths.src.img)
-    .pipe(
-      cache(
-        imagemin([
-          imagemin.gifsicle({
-            interlaced: true
-          }),
-          jpegrecompress({
-            progressive: true,
-            max: 90,
-            min: 80,
-          }),
-          pngquant(),
-          imagemin.svgo({
-            plugins: [{
-              removeViewBox: false
-            }]
-          }),
-        ])
+      .src(paths.src.img) // source image path
+      .pipe(
+          cache(
+              imagemin([
+                  // image compression
+                  imagemin.gifsicle({ interlaced: true }),
+                  jpegrecompress({
+                      progressive: true,
+                      max: 90,
+                      min: 80,
+                  }),
+                  pngquant(),
+                  imagemin.svgo({ plugins: [{ removeViewBox: false }] }),
+              ])
+          )
       )
-    )
-    .pipe(gulp.dest(paths.build.img)); // uploading finished files
-  done();
+      .pipe(gulp.dest(paths.build.img)) // uploading finished files
+      .pipe(
+          imagemin([
+              webp({
+                  quality: 85,
+              }),
+          ])
+      )
+      .pipe(extReplace('.webp'))
+      .pipe(gulp.dest(paths.build.img)); // webp
+      done();
 });
 
 // -* Delete Build Delectory
