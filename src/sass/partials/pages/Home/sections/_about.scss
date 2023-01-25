@@ -10,18 +10,12 @@
         & {
             width: 1000px;
             margin: 0 auto;
-            padding: 50px 50px;
+            padding: 30px 50px 50px;
 
             display: flex;
             flex-direction: column;
             gap: 50px;
             justify-content: center;
-        }
-
-        .head {
-            h2 {
-                text-align: center;
-            }
         }
 
         .body {
@@ -56,10 +50,6 @@
             gap: 30px;
         }
 
-        .head {
-            h2 {}
-        }
-
         .body {
             flex-direction: column;
             align-items: stretch;
@@ -82,10 +72,6 @@
             width: 100%;
         }
 
-        .head {
-            h2 {}
-        }
-
         .body {
             p {}
 
@@ -96,10 +82,6 @@
     // * Empty
     @media (min-width: 10000000px) {
         & {}
-
-        .head {
-            h2 {}
-        }
 
         .body {
             p {}

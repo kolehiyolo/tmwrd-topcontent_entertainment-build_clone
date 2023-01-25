@@ -1,7 +1,7 @@
 <!-- * Very Doable -->
 
 <!-- ? I have an idea but not sure -->
-Desaturate the left-right hero images with filter
+<!-- Desaturate the left-right hero images with filter -->
 Transfer the About Section header into the Hero Section
 
 <!-- ! Will have to learn -->

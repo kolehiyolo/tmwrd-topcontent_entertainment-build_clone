@@ -791,14 +791,16 @@ html body .filter-show {
         flex-direction: column;
     -ms-flex-align: center;
         align-items: center;
-    gap: 100px;
+    gap: 85px;
     width: 100vw;
+    min-height: 100vh;
     padding: 220px 20px 50px 20px;
     position: relative;
   }
   html body .main-home .section-hero .intro,
 html body .main-home .section-hero .content_type,
-html body .main-home .section-hero .steps {
+html body .main-home .section-hero .steps,
+html body .main-home .section-hero .bottom {
     position: relative;
     z-index: 1;
   }
@@ -943,6 +945,9 @@ html body .main-home .section-hero .steps {
     font-size: 1.3rem;
     text-align: center;
   }
+  html body .main-home .section-hero .bottom h2 {
+    text-align: center;
+  }
   html body .main-home .section-hero .img-bg {
     position: absolute;
     z-index: 0;
@@ -1082,14 +1087,14 @@ html body .main-home .section-hero .steps {
     gap: 20px;
   }
   html body .main-home .section-hero .steps .list .item {
-    width: 150px;
+    width: 170px;
   }
 }
 @media (min-width: 0px) {
   html body .main-home .section-about {
     width: 1000px;
     margin: 0 auto;
-    padding: 50px 50px;
+    padding: 30px 50px 50px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -1097,9 +1102,6 @@ html body .main-home .section-hero .steps {
     gap: 50px;
     -ms-flex-pack: center;
         justify-content: center;
-  }
-  html body .main-home .section-about .head h2 {
-    text-align: center;
   }
   html body .main-home .section-about .body {
     display: -ms-flexbox;
