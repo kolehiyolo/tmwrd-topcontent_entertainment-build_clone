@@ -1118,6 +1118,7 @@ html body .main-home .section-join_us .content .img {
     width: 100%;
   }
   html body .main-home .section-join_us .content .img picture img {
+    border-radius: 20px;
     width: 100%;
     height: auto;
   }
