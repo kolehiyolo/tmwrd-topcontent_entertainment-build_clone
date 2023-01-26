@@ -112,7 +112,7 @@
                     text-align: center;
                     gap: 10px;
 
-                    &-movies {}
+                    &-streaming {}
 
                     &-music {}
 
@@ -290,7 +290,7 @@
                     padding: 10px 0;
                     background-color: var(--color-container-1);
 
-                    &-movies {}
+                    &-streaming {}
 
                     &-music {}
 
@@ -442,7 +442,7 @@
                     padding: 20px 0;
                     background-color: var(--color-container-1);
 
-                    &-movies {}
+                    &-streaming {}
 
                     &-music {}
 
@@ -544,7 +544,7 @@
         .content_type {
             .list {
                 .item {
-                    &-movies {}
+                    &-streaming {}
 
                     &-music {}
 
@@ -611,7 +611,7 @@
         .content_type {
             .list {
                 .item {
-                    &-movies {}
+                    &-streaming {}
 
                     &-music {}
 
