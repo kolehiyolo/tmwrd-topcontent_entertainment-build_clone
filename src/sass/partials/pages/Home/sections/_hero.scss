@@ -10,10 +10,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 85px;
+            // gap: 85px;
+            gap: 6.5vh;
             width: 100vw;
             min-height: 100vh;
-            padding: 100px 20px 50px 20px;
+            padding: 65px 20px 50px 20px;
             position: relative;
             justify-content: center;
         }
@@ -224,9 +225,13 @@
     @media (min-width: 0px) and (max-width: 400px) {
         & {
             background-image: none;
-            gap: 15px;
-            padding: 30px 0px 20px 0px;
+            padding: 30px 0px 30px 0px;
             align-items: stretch;
+            // justify-content: space-between;
+            // gap: 15px;
+            // gap: 7.5vh;
+            gap: 6.5vh;
+            justify-content: center;
         }
 
         .intro {
@@ -357,8 +362,10 @@
         .bottom {
             order: 4;
             grid-area: bottom;
+            padding: 0 15px;
+
             h2 {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
         }
 
@@ -374,6 +381,8 @@
             gap: 20px;
             padding: 30px 0px 20px 0px;
             align-items: stretch;
+            gap: 6.5vh;
+            justify-content: center;
             // display: grid;
             // grid-template-columns: 1fr;
             // grid-template-areas: "steps"
@@ -509,6 +518,7 @@
         .bottom {
             order: 4;
             grid-area: bottom;
+            padding: 0 15px;
             h2 {}
         }
 
