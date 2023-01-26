@@ -177,6 +177,8 @@ html {
   scroll-behavior: auto !important;
   font-size: 16px;
   font-family: var(--font-2);
+  overflow-x: hidden;
+  height: 100%;
 }
 html body {
   width: 100vw;
@@ -793,6 +795,7 @@ html body .filter-show {
         align-items: center;
     gap: 6.5vh;
     width: 100vw;
+    min-height: -webkit-fill-available;
     min-height: 100vh;
     padding: 65px 20px 50px 20px;
     position: relative;
