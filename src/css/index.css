@@ -177,6 +177,7 @@ html {
   scroll-behavior: auto !important;
   font-size: 16px;
   font-family: var(--font-2);
+  overflow-x: hidden;
 }
 html body {
   width: 100vw;
