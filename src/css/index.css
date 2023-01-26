@@ -714,8 +714,9 @@ html body .filter-show {
     gap: 85px;
     width: 100vw;
     min-height: 100vh;
-    padding: 220px 20px 50px 20px;
+    padding: 100px 20px 50px 20px;
     position: relative;
+    justify-content: center;
   }
   html body .main-home .section-hero .intro,
 html body .main-home .section-hero .content_type,
@@ -867,18 +868,18 @@ html body .main-home .section-hero .bottom {
     right: -30px;
   }
 }
-@media (min-width: 0px) and (max-width: 640px) {
+@media (min-width: 0px) and (max-width: 400px) {
   html body .main-home .section-hero {
     background-image: none;
-    gap: 30px;
+    gap: 15px;
     padding: 30px 0px 20px 0px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "steps" "intro" "content_type";
+    align-items: stretch;
   }
   html body .main-home .section-hero .intro {
     grid-area: intro;
     padding: 0px 20px 0px 20px;
+    order: 2;
+    gap: 10px;
   }
   html body .main-home .section-hero .intro .txt-title {
     font-size: 1.8rem;
@@ -907,6 +908,110 @@ html body .main-home .section-hero .bottom {
   }
   html body .main-home .section-hero .content_type {
     grid-area: content_type;
+    order: 2;
+  }
+  html body .main-home .section-hero .content_type .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100vw;
+    gap: 0px;
+    margin: 0;
+  }
+  html body .main-home .section-hero .content_type .list .item {
+    border: solid 1px var(--color-white-2);
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--color-container-1);
+  }
+  html body .main-home .section-hero .content_type .list .item svg {
+    width: 30px;
+    height: 30px;
+  }
+  html body .main-home .section-hero .steps {
+    order: 1;
+    grid-area: steps;
+    padding: 20px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+  html body .main-home .section-hero .steps .txt-instructions {
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  html body .main-home .section-hero .steps .list {
+    justify-content: center;
+    gap: 10px;
+  }
+  html body .main-home .section-hero .steps .list .item {
+    flex: 1 1 0px;
+    width: 0;
+  }
+  html body .main-home .section-hero .steps .list .item .step_number {
+    width: 30px;
+    height: 30px;
+    background-color: #b6b6b6;
+  }
+  html body .main-home .section-hero .steps .list .item .step_number span {
+    font-size: 1.1rem;
+  }
+  html body .main-home .section-hero .steps .list .item .step_text {
+    font-size: 0.775rem;
+  }
+  html body .main-home .section-hero .bottom {
+    order: 4;
+    grid-area: bottom;
+  }
+  html body .main-home .section-hero .bottom h2 {
+    font-size: 1.2rem;
+  }
+  html body .main-home .section-hero .img-bg {
+    display: none;
+  }
+}
+@media (min-width: 401px) and (max-width: 640px) {
+  html body .main-home .section-hero {
+    background-image: none;
+    gap: 20px;
+    padding: 30px 0px 20px 0px;
+    align-items: stretch;
+  }
+  html body .main-home .section-hero .intro {
+    grid-area: intro;
+    padding: 0px 20px 0px 20px;
+    order: 2;
+  }
+  html body .main-home .section-hero .intro .txt-title {
+    font-size: 1.8rem;
+  }
+  html body .main-home .section-hero .intro .txt-title-1 {
+    display: none;
+  }
+  html body .main-home .section-hero .intro .txt-title-2 {
+    display: block;
+  }
+  html body .main-home .section-hero .intro .txt-subtitle {
+    font-size: 1.3rem;
+    display: none;
+  }
+  html body .main-home .section-hero .intro .btn-continue {
+    padding: 10px 0px;
+  }
+  html body .main-home .section-hero .intro .txt-compatibility {
+    font-size: 0.95rem;
+  }
+  html body .main-home .section-hero .intro .txt-compatibility-1 {
+    display: none;
+  }
+  html body .main-home .section-hero .intro .txt-compatibility-2 {
+    display: flex;
+  }
+  html body .main-home .section-hero .content_type {
+    grid-area: content_type;
+    order: 2;
   }
   html body .main-home .section-hero .content_type .list {
     display: grid;
@@ -927,9 +1032,9 @@ html body .main-home .section-hero .bottom {
     height: 30px;
   }
   html body .main-home .section-hero .steps {
+    order: 1;
     grid-area: steps;
-    padding: 0px 20px 0px 20px;
-    padding-top: 50px;
+    padding: 20px 20px 0px 20px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -958,6 +1063,10 @@ html body .main-home .section-hero .bottom {
   }
   html body .main-home .section-hero .steps .list .item .step_text {
     font-size: 0.875rem;
+  }
+  html body .main-home .section-hero .bottom {
+    order: 4;
+    grid-area: bottom;
   }
   html body .main-home .section-hero .img-bg {
     display: none;

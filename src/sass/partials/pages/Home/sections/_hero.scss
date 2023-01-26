@@ -13,8 +13,9 @@
             gap: 85px;
             width: 100vw;
             min-height: 100vh;
-            padding: 220px 20px 50px 20px;
+            padding: 100px 20px 50px 20px;
             position: relative;
+            justify-content: center;
         }
 
         .intro,
@@ -219,23 +220,20 @@
         }
     }
 
-    // * Mobile Sizes
-    @media (min-width: 0px) and (max-width: 640px) {
+    // * Smaller Mobile Sizes
+    @media (min-width: 0px) and (max-width: 400px) {
         & {
             background-image: none;
-            gap: 30px;
+            gap: 15px;
             padding: 30px 0px 20px 0px;
-
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-areas: "steps"
-                "intro"
-                "content_type";
+            align-items: stretch;
         }
 
         .intro {
             grid-area: intro;
             padding: 0px 20px 0px 20px;
+            order: 2;
+            gap: 10px;
 
             .txt-title {
                 font-size: 1.8rem;
@@ -275,6 +273,159 @@
 
         .content_type {
             grid-area: content_type;
+            order: 2;
+
+            .list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                // width: calc(100vw - 40px);
+                width: 100vw;
+                gap: 0px;
+                margin: 0;
+
+                .item {
+                    border: solid 1px var(--color-white-2);
+                    width: 100%;
+                    padding: 10px 0;
+                    background-color: var(--color-container-1);
+
+                    &-movies {}
+
+                    &-music {}
+
+                    &-games {}
+
+                    &-audiobooks {}
+
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    p {}
+                }
+            }
+        }
+
+        .steps {
+            order: 1;
+            grid-area: steps;
+            padding: 20px 10px 0px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 20px;
+
+            .txt-instructions {
+                display: block;
+                text-align: center;
+                font-size: 1.3rem;
+            }
+
+            .list {
+                justify-content: center;
+                gap: 10px;
+
+                .item {
+                    flex: 1 1 0px;
+                    width: 0;
+
+                    &-1 {}
+
+                    &-2 {}
+
+                    &-3 {}
+
+                    .step_number {
+                        width: 30px;
+                        height: 30px;
+                        background-color: #b6b6b6;
+
+                        span {
+                            font-size: 1.1rem;
+                        }
+                    }
+
+                    .step_text {
+                        font-size: 0.775rem;
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            order: 4;
+            grid-area: bottom;
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+
+        .img-bg {
+            display: none;
+        }
+    }
+
+    // * Mobile Sizes
+    @media (min-width: 401px) and (max-width: 640px) {
+        & {
+            background-image: none;
+            gap: 20px;
+            padding: 30px 0px 20px 0px;
+            align-items: stretch;
+            // display: grid;
+            // grid-template-columns: 1fr;
+            // grid-template-areas: "steps"
+            //     "intro"
+            //     "content_type"
+            //     "bottom";
+        }
+
+        .intro {
+            grid-area: intro;
+            padding: 0px 20px 0px 20px;
+            order: 2;
+
+            .txt-title {
+                font-size: 1.8rem;
+
+                &-1 {
+                    display: none;
+                }
+
+                &-2 {
+                    display: block;
+                }
+            }
+
+            .txt-subtitle {
+                font-size: 1.3rem;
+                display: none;
+            }
+
+            .btn-continue {
+                padding: 10px 0px;
+            }
+
+            .txt-compatibility {
+                font-size: 0.95rem;
+
+                &-1 {
+                    display: none;
+                }
+
+                &-2 {
+                    display: flex;
+                }
+
+                .green_dot {}
+            }
+        }
+
+        .content_type {
+            grid-area: content_type;
+            order: 2;
 
             .list {
                 display: grid;
@@ -310,9 +461,9 @@
         }
 
         .steps {
+            order: 1;
             grid-area: steps;
-            padding: 0px 20px 0px 20px;
-            padding-top: 50px;
+            padding: 20px 20px 0px 20px;
             display: flex;
             flex-direction: column;
             align-items: stretch;
@@ -356,6 +507,8 @@
         }
 
         .bottom {
+            order: 4;
+            grid-area: bottom;
             h2 {}
         }
 
