@@ -986,6 +986,8 @@ html body .main-home .section-hero .bottom {
     padding: 30px 0px 20px 0px;
     -ms-flex-align: stretch;
         align-items: stretch;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
   }
   html body .main-home .section-hero .intro {
     grid-area: intro;
@@ -1101,6 +1103,8 @@ html body .main-home .section-hero .bottom {
     padding: 30px 0px 20px 0px;
     -ms-flex-align: stretch;
         align-items: stretch;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
   }
   html body .main-home .section-hero .intro {
     grid-area: intro;
