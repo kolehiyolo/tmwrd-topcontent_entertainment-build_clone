@@ -1,0 +1,15 @@
+.test {
+    .child-1 {
+        background-color: red;
+    }
+    .child-2 {
+        background-color: black;
+    }
+    .child-3 {
+        background-color: blue;
+
+        p {
+            font-size: 15px;
+        }
+    }
+}
